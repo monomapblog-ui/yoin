@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 記事本文スタイル（note風） */
+.article-body {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #111;
+}
+
+.article-body h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.article-body h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 0.75rem;
+}
+
+.article-body p {
+  margin: 1.2rem 0;
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.article-body li {
+  margin: 0.4rem 0;
+}
+
+.article-body blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  margin: 1.5rem 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.article-body a {
+  color: #10b981;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article-body img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.article-body hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2.5rem 0;
+}
+
+/* 有料記事グラデーション */
+.paywall-gradient {
+  background: linear-gradient(to bottom, transparent, white 60%);
+}

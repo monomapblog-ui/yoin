@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMWGEPBMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMWGEPBMND');
+  </script>
+  <title>チケット購入 | GRASTA EXPO</title>
+  <meta name="description" content="グラステEXPO チケット購入ページ。前売り券¥2,500、当日券¥3,000。2026年11月某日（東京）開催。" />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="グラステEXPO" />
+  <meta property="og:title"       content="チケット購入 | GRASTA EXPO" />
+  <meta property="og:description" content="グラステEXPO チケット購入ページ。前売り券¥2,500、当日券¥3,000。2026年11月某日（東京）開催。" />
+  <meta property="og:url"         content="https://gravurestation.jp/ticket.html" />
+  <meta property="og:image"       content="https://gravurestation.jp/ogp.jpg" />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <link rel="canonical" href="https://gravurestation.jp/ticket.html" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f8f6f2;
+      --bg2:     #f0ede7;
+      --ink:     #1a1612;
+      --ink2:    #5a5450;
+      --ink3:    #9a9390;
+      --pink:    #B51748;
+      --pink2:   #D4476B;
+      --purple:  #8b52d6;
+      --border:  rgba(26,22,18,.1);
+      --display: 'Cinzel', serif;
+      --mincho:  'Shippori Mincho', serif;
+      --sans:    'Noto Sans JP', sans-serif;
+      --mono:    'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: .04em;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(248,246,242,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 64px;
+      padding: 0 40px;
+    }
+
+    .logo { display: block; }
+    .logo-img { height: 36px; width: auto; display: block; }
+
+    .header-right { display: flex; justify-content: flex-end; }
+
+    .menu-btn {
+      font-family: var(--mono);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      color: var(--ink);
+      background: transparent;
+      border: 1.5px solid var(--ink);
+      padding: .5rem 1.6rem;
+      cursor: pointer;
+      transition: background .25s, color .25s;
+    }
+
+    .menu-btn:hover { background: var(--ink); color: var(--bg); }
+    .btn {
+      display: inline-block; padding: .85rem 2.4rem; border-radius: 50px;
+      font-family: var(--display); font-size: .78rem; letter-spacing: .18em;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn:hover { opacity: .8; }
+    .btn-outline { border: 1.5px solid var(--border); color: var(--ink2); }
+
+    /* ─── BREADCRUMB ─── */
+    .breadcrumb {
+      padding: 100px 8% 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb-inner {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    .breadcrumb a { color: var(--ink3); text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb-sep { opacity: .4; }
+    .breadcrumb-current { color: var(--ink2); }
+
+    /* ─── SECTION LABEL ─── */
+    .sec-label { display: flex; align-items: center; gap: 10px; margin-bottom: 2.4rem; }
+    .sec-label-line { width: 36px; height: 1.5px; background: linear-gradient(90deg, var(--pink), var(--purple)); }
+    .sec-label-text {
+      font-family: var(--display);
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+    .sec-label-diamond {
+      width: 6px; height: 6px;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      padding: 60px 8% 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-hero-h1 {
+      font-family: var(--mincho);
+      font-size: clamp(1.9rem, 4vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: .1em;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero-lead {
+      font-size: .88rem;
+      color: var(--ink2);
+      line-height: 2.1;
+      letter-spacing: .05em;
+      max-width: 540px;
+    }
+
+    /* ─── TICKET SECTION ─── */
+    .ticket-content {
+      padding: 60px 8% 120px;
+    }
+
+    .ticket-inner { max-width: 800px; margin: 0 auto; }
+
+    /* Plans */
+    .plans-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .plan-card {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      padding: 3rem 2.8rem;
+      text-align: center;
+      position: relative;
+      transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(26,22,18,.08);
+    }
+
+    .plan-card.featured {
+      border-color: var(--pink);
+      background: linear-gradient(160deg, rgba(181,23,72,.04), rgba(139,82,214,.03));
+    }
+
+    .plan-ribbon {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      color: #fff;
+      font-family: var(--display);
+      font-size: .56rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      padding: .45rem 0;
+      text-transform: uppercase;
+    }
+
+    .plan-tier {
+      font-family: var(--display);
+      font-size: .62rem;
+      letter-spacing: .28em;
+      font-weight: 400;
+      color: var(--pink);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .plan-card.featured .plan-tier { margin-top: 2rem; }
+
+    .plan-price {
+      font-family: var(--mono);
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+
+    .plan-price small { font-size: .8rem; font-weight: 300; color: var(--ink2); }
+
+    .plan-desc {
+      font-size: .82rem;
+      color: var(--ink2);
+      line-height: 1.9;
+      letter-spacing: .04em;
+      margin: 1.2rem 0 .6rem;
+    }
+
+    .plan-features {
+      list-style: none;
+      text-align: left;
+      margin: 1rem 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .plan-features li {
+      font-size: .8rem;
+      color: var(--ink2);
+      letter-spacing: .04em;
+      display: flex;
+      align-items: baseline;
+      gap: .5rem;
+    }
+
+    .plan-features li::before {
+      content: '—';
+      color: var(--pink);
+      font-size: .7rem;
+      flex-shrink: 0;
+    }
+
+    /* ─── PURCHASE FORM ─── */
+    .purchase-form-wrap {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 3.6rem 4rem;
+    }
+
+    .form-section-title {
+      font-family: var(--mincho);
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      margin-bottom: 2rem;
+    }
+
+    .form-group { margin-bottom: 1.4rem; }
+
+    .form-label {
+      display: block;
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      margin-bottom: .55rem;
+    }
+
+    .form-label .req { color: var(--pink); margin-left: .2rem; }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: .85rem 1rem;
+      border: 1.5px solid var(--border);
+      background: var(--bg);
+      font-family: var(--sans);
+      font-size: .88rem;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .2s;
+      border-radius: 0;
+      appearance: none;
+      letter-spacing: .04em;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus { border-color: var(--pink); }
+
+    .form-select-wrap { position: relative; }
+
+    .form-select-wrap::after {
+      content: '↓';
+      position: absolute;
+      right: 1rem; top: 50%;
+      transform: translateY(-50%);
+      color: var(--ink3);
+      font-size: .8rem;
+      pointer-events: none;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .form-note {
+      font-size: .76rem;
+      color: var(--ink3);
+      line-height: 1.9;
+      letter-spacing: .04em;
+      margin-top: .4rem;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 1.1rem;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      color: #fff;
+      border: none;
+      font-family: var(--sans);
+      font-size: .9rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      cursor: pointer;
+      transition: opacity .2s, transform .2s;
+      margin-top: 1rem;
+    }
+
+    .form-submit:hover { opacity: .9; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .form-success.show { display: block; }
+
+    .form-success-icon { font-size: 3.2rem; margin-bottom: 1.2rem; }
+
+    .form-success-title {
+      font-family: var(--mincho);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      margin-bottom: .8rem;
+    }
+
+    .form-success-body {
+      font-size: .86rem;
+      color: var(--ink2);
+      line-height: 2.1;
+      letter-spacing: .05em;
+    }
+
+    /* Notes */
+    .ticket-notes {
+      margin-top: 2.4rem;
+      border-top: 1px solid var(--border);
+      padding-top: 1.6rem;
+    }
+
+    .ticket-notes p {
+      font-size: .78rem;
+      color: var(--ink3);
+      line-height: 2;
+      letter-spacing: .04em;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(248,246,242,.08);
+      padding: 60px 8% 32px;
+      color: rgba(248,246,242,.7);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--bg);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo span { color: var(--pink2); }
+    .footer-brand-desc { font-size: .8rem; line-height: 1.9; }
+
+    .footer-col h4 {
+      font-family: var(--mono);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,.4);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: .65rem; }
+
+    .footer-col a {
+      font-size: .8rem;
+      color: rgba(248,246,242,.6);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover { color: var(--pink2); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(248,246,242,.08);
+      padding-top: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy { font-size: .72rem; color: rgba(248,246,242,.35); }
+    .footer-sns { display: flex; gap: .8rem; }
+
+    .sns-icon {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      text-decoration: none;
+    }
+
+    .sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    /* ─── DRAWER ─── */
+    .drawer-overlay {
+      position: fixed; inset: 0;
+      background: rgba(26,22,18,.6);
+      z-index: 1100; opacity: 0; pointer-events: none;
+      transition: opacity .4s cubic-bezier(.16,1,.3,1);
+      backdrop-filter: blur(4px);
+    }
+
+    .drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+    .drawer {
+      position: fixed; top: 0; right: 0;
+      width: min(420px, 100vw); height: 100%;
+      background: var(--ink); z-index: 1200;
+      transform: translateX(100%);
+      transition: transform .5s cubic-bezier(.16,1,.3,1);
+      display: flex; flex-direction: column; overflow-y: auto;
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 2.4rem;
+      border-bottom: 1px solid rgba(248,246,242,.08);
+      flex-shrink: 0;
+    }
+
+    .drawer-logo-img { height: 32px; filter: brightness(0) invert(1); }
+
+    .drawer-close {
+      width: 40px; height: 40px; background: transparent;
+      border: 1.5px solid rgba(248,246,242,.2); color: var(--bg);
+      font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .2s, background .2s;
+    }
+
+    .drawer-close:hover { border-color: var(--pink2); background: rgba(181,23,72,.15); }
+
+    .drawer-nav { padding: 2.4rem; flex: 1; }
+
+    .drawer-nav-label {
+      font-family: var(--mono); font-size: .58rem; font-weight: 700;
+      letter-spacing: .28em; color: rgba(248,246,242,.3);
+      text-transform: uppercase; margin-bottom: 1.6rem;
+    }
+
+    .drawer-nav-list { list-style: none; }
+    .drawer-nav-item { border-bottom: 1px solid rgba(248,246,242,.06); }
+
+    .drawer-nav-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 0; text-decoration: none;
+      color: rgba(248,246,242,.85);
+      font-family: var(--mincho); font-size: 1.1rem; font-weight: 500;
+      letter-spacing: .1em;
+      transition: color .2s, padding-left .2s;
+    }
+
+    .drawer-nav-link:hover { color: var(--pink2); padding-left: .5rem; }
+
+    .drawer-nav-link .nav-en {
+      font-family: var(--mono); font-size: .62rem; font-weight: 700;
+      letter-spacing: .18em; color: rgba(248,246,242,.3); text-transform: uppercase;
+    }
+
+    .drawer-nav-link:hover .nav-en { color: var(--pink2); }
+
+    .drawer-footer {
+      padding: 2rem 2.4rem;
+      border-top: 1px solid rgba(248,246,242,.08);
+      flex-shrink: 0;
+    }
+
+    .drawer-footer-sns { display: flex; gap: .6rem; margin-bottom: 1.4rem; }
+
+    .drawer-sns-icon {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem; cursor: pointer;
+      transition: border-color .2s, background .2s;
+      text-decoration: none; color: rgba(248,246,242,.6);
+    }
+
+    .drawer-sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    .drawer-footer-copy {
+      font-size: .68rem; color: rgba(248,246,242,.25);
+      font-family: var(--mono); letter-spacing: .05em;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1);
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+    .d1 { transition-delay: .05s; }
+    .d2 { transition-delay: .12s; }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 768px) {
+      .plans-grid { grid-template-columns: 1fr; }
+      .purchase-form-wrap { padding: 2.4rem 1.8rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0 20px; }
+      .ticket-content { padding: 60px 6% 80px; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HOME",
+        "item": "https://gravurestation.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "チケット購入",
+        "item": "https://gravurestation.jp/ticket.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- DRAWER OVERLAY -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- MENU DRAWER -->
+  <aside class="drawer" id="drawer" aria-label="ナビゲーション">
+    <div class="drawer-header">
+      <span><img src="logo.jpg" alt="GRASTA" class="drawer-logo-img" width="113" height="100" /></span>
+      <button class="drawer-close" id="drawer-close" aria-label="閉じる">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <p class="drawer-nav-label">Navigation</p>
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="index.html" class="drawer-nav-link"><span>トップ</span><span class="nav-en">TOP</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#about" class="drawer-nav-link"><span>イベント概要</span><span class="nav-en">ABOUT</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#lineup" class="drawer-nav-link"><span>参加出展者</span><span class="nav-en">LINEUP</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="ticket.html" class="drawer-nav-link"><span>チケット</span><span class="nav-en">TICKET</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#schedule" class="drawer-nav-link"><span>スケジュール</span><span class="nav-en">SCHEDULE</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#access" class="drawer-nav-link"><span>アクセス</span><span class="nav-en">ACCESS</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="safety.html" class="drawer-nav-link"><span>安心・安全</span><span class="nav-en">SAFETY</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="station.html" class="drawer-nav-link"><span>グラビアステーション</span><span class="nav-en">STATION</span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <div class="drawer-footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="Instagram">📷</a>
+        <a class="drawer-sns-icon" title="TikTok">🎵</a>
+      </div>
+      <p class="drawer-footer-copy">© 2026 合同会社グラステ / GRASTA LLC.</p>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="GRASTA" class="logo-img" width="113" height="100" /></a>
+      <div></div>
+      <div class="header-right">
+        <button class="menu-btn" id="menu-btn">MENU</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">HOME</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">TICKET</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero reveal">
+    <div class="sec-label">
+      <div class="sec-label-line"></div>
+      <span class="sec-label-text">TICKET</span>
+      <div class="sec-label-diamond"></div>
+    </div>
+    <h1 class="page-hero-h1">チケット購入</h1>
+    <p class="page-hero-lead">グラステEXPOへのご参加は事前予約制です。下記フォームよりお申し込みください。確認メールをお送りした後、お支払い情報をご案内します。</p>
+  </div>
+
+  <!-- TICKET CONTENT -->
+  <div class="ticket-content">
+    <div class="ticket-inner">
+
+      <!-- Plans -->
+      <div class="plans-grid">
+        <div class="plan-card reveal d1">
+          <p class="plan-tier">ADVANCE</p>
+          <p class="plan-price">¥2,500<small> 税込</small></p>
+          <p class="plan-desc">前売り券</p>
+          <ul class="plan-features">
+            <li>会場内自由入場・全エリア対応</li>
+            <li>当日は入場券をご提示ください</li>
+            <li>販売期間：〜2026年10月31日</li>
+          </ul>
+        </div>
+        <div class="plan-card featured reveal d2">
+          <div class="plan-ribbon">DOOR TICKET</div>
+          <p class="plan-tier">DOOR</p>
+          <p class="plan-price">¥3,000<small> 税込</small></p>
+          <p class="plan-desc">当日券</p>
+          <ul class="plan-features">
+            <li>会場入口にて当日販売</li>
+            <li>混雑時は販売を停止する場合があります</li>
+            <li>前売り券での事前購入を推奨します</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Purchase Form -->
+      <div class="purchase-form-wrap reveal">
+        <p class="form-section-title">前売り券の申し込み</p>
+
+        <form id="ticket-form" novalidate>
+          <!-- Web3Forms 設定 (access_key は web3forms.com で取得後に差し替え) -->
+          <input type="hidden" name="access_key" value="9b034f28-04ed-49ff-9781-11709688546b" />
+          <input type="hidden" name="subject" value="【グラステEXPO】チケット申込が届きました" />
+          <input type="hidden" name="from_name" value="グラステEXPO チケット申込" />
+          <!-- スパム対策ハニーポット（非表示・入力されたら弾く） -->
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="tf-name">お名前<span class="req">*</span></label>
+              <input class="form-input" type="text" id="tf-name" name="name" placeholder="山田 花子" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tf-kana">フリガナ<span class="req">*</span></label>
+              <input class="form-input" type="text" id="tf-kana" name="kana" placeholder="ヤマダ ハナコ" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="tf-email">メールアドレス<span class="req">*</span></label>
+            <input class="form-input" type="email" id="tf-email" name="email" placeholder="example@email.com" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="tf-qty">枚数<span class="req">*</span></label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="tf-qty" name="qty" required>
+                  <option value="">選択</option>
+                  <option value="1">1枚</option>
+                  <option value="2">2枚</option>
+                  <option value="3">3枚</option>
+                  <option value="4">4枚</option>
+                  <option value="5">5枚</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="tf-age">年齢確認<span class="req">*</span></label>
+              <div class="form-select-wrap">
+                <select class="form-select" id="tf-age" name="age" required>
+                  <option value="">選択</option>
+                  <option value="yes">18歳以上です</option>
+                </select>
+              </div>
+              <p class="form-note">本イベントは18歳以上限定です</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="tf-note">備考（任意）</label>
+            <input class="form-input" type="text" id="tf-note" name="note" placeholder="アレルギー・車椅子対応など" />
+          </div>
+
+          <p class="form-note" style="margin-bottom:1rem;">
+            ※ 申し込み確認メールにお支払い方法（銀行振込）をご案内します。<br>
+            ※ 入金確認後にチケット（QRコード）をお送りします。<br>
+            ※ 返信まで1〜2営業日いただく場合があります。
+          </p>
+
+          <button class="form-submit" type="submit" id="ticket-submit-btn">申し込む（前売り ¥2,500）</button>
+        </form>
+
+        <div class="form-success" id="ticket-success">
+          <div class="form-success-icon">🎟️</div>
+          <p class="form-success-title">申し込みを受け付けました</p>
+          <p class="form-success-body">
+            ご登録のメールアドレスに確認メールをお送りします。<br>
+            お支払い方法のご案内をご確認の上、お手続きをお進めください。<br><br>
+            ご不明な点は <a href="index.html" style="color:var(--pink);">お問い合わせ</a> よりご連絡ください。
+          </p>
+        </div>
+      </div>
+
+      <div class="ticket-notes reveal">
+        <p>※ チケットの転売・譲渡は固く禁じます。発覚した場合は入場をお断りします。</p>
+        <p>※ ステージチケット・チェキ券等は別途会場内にて販売となります。</p>
+        <p>※ 18歳未満の方は入場できません。入場時に顔写真付き身分証をご提示ください。</p>
+        <p>※ 当日券は会場入口にて販売しますが、売り切れの場合があります。</p>
+      </div>
+
+      <div class="reveal" style="margin-top:2.5rem;padding:2rem;border:1px solid rgba(181,23,72,.2);border-radius:8px;background:rgba(181,23,72,.03);text-align:center;">
+        <p style="font-family:var(--display);font-size:.62rem;letter-spacing:.28em;color:var(--pink);margin-bottom:.6rem;">HAVE QUESTIONS?</p>
+        <p style="font-family:var(--mincho);font-size:1.05rem;font-weight:500;letter-spacing:.08em;color:var(--ink);margin-bottom:.5rem;">ご不明な点はFAQをご確認ください</p>
+        <p style="font-size:.88rem;color:var(--ink2);margin-bottom:1.2rem;">年齢制限・再入場・撮影ルールなどよくある質問をまとめています。</p>
+        <a href="index.html#faq" class="btn btn-outline" style="font-size:.8rem;padding:.6rem 1.8rem;">よくある質問を見る →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">GRASTA<span>.</span></a>
+        <p class="footer-brand-desc">ネットで見かけるあの子にリアルで会える、新感覚の展示会型イベント。<br>合同会社グラステが贈る新しいエンタテイメント体験。</p>
+      </div>
+      <div class="footer-col">
+        <h4>EVENT</h4>
+        <ul>
+          <li><a href="index.html#about">イベント概要</a></li>
+          <li><a href="index.html#lineup">出演者</a></li>
+          <li><a href="index.html#schedule">スケジュール</a></li>
+          <li><a href="index.html#access">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>TICKET</h4>
+        <ul>
+          <li><a href="ticket.html">チケット購入</a></li>
+          <li><a href="ticket.html">料金・特典</a></li>
+          <li><a href="terms.html">注意事項</a></li>
+          <li><a href="terms.html#refund">払い戻しポリシー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="company.html">合同会社グラステ</a></li>
+          <li><span style="font-size:.85rem;color:rgba(248,246,242,.3);">グラビアステーション</span></li>
+          <li><a href="bar.html">グラステBAR</a></li>
+          <li><a href="index.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 合同会社グラステ / GRASTA LLC. All Rights Reserved.</p>
+      <div class="footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="Instagram">📷</a>
+        <a class="sns-icon" title="TikTok">🎵</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── スクロールアニメーション ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => obs.observe(el));
+
+    // ── ドロワー ──
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const open  = () => { drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; };
+    const close = () => { drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; };
+    document.getElementById('menu-btn').addEventListener('click', open);
+    document.getElementById('drawer-close').addEventListener('click', close);
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+    // ── 申し込みフォーム ──
+    const form    = document.getElementById('ticket-form');
+    const success = document.getElementById('ticket-success');
+    const submitBtn = document.getElementById('ticket-submit-btn');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // Basic validation
+      const name  = document.getElementById('tf-name').value.trim();
+      const kana  = document.getElementById('tf-kana').value.trim();
+      const email = document.getElementById('tf-email').value.trim();
+      const qty   = document.getElementById('tf-qty').value;
+      const age   = document.getElementById('tf-age').value;
+
+      if (!name || !kana || !email || !qty || !age) {
+        alert('必須項目をすべてご入力ください。');
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '送信中…';
+
+      const data = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+        .then(res => res.json())
+        .then(json => {
+          if (json.success) {
+            form.style.display = 'none';
+            success.classList.add('show');
+          } else {
+            throw new Error(json.message || '送信に失敗しました');
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          submitBtn.disabled = false;
+          submitBtn.textContent = '申し込む（前売り ¥2,500）';
+          alert('送信に失敗しました。時間をおいて再度お試しください。');
+        });
+    });
+  </script>
+
+</body>
+</html>

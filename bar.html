@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMWGEPBMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMWGEPBMND');
+  </script>
+  <title>グラステBAR | GRASTA</title>
+  <meta name="description" content="グラステBAR — 裏垢女子出展者がスタッフを務める会員制バー。近日オープン予定。" />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://gravurestation.jp/bar.html" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #f8f6f2;
+      --bg2:    #f0ede7;
+      --ink:    #1a1612;
+      --ink2:   #5a5450;
+      --ink3:   #9a9390;
+      --pink:   #B51748;
+      --pink2:  #D4476B;
+      --purple: #8b52d6;
+      --gold:   #c8924a;
+      --border: rgba(26,22,18,.1);
+      --display:'Cinzel', serif;
+      --mincho: 'Shippori Mincho', serif;
+      --sans:   'Noto Sans JP', sans-serif;
+      --mono:   'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: .04em;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(248,246,242,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 64px;
+      padding: 0 40px;
+    }
+
+    .logo-img { height: 36px; width: auto; display: block; }
+    .header-right { display: flex; justify-content: flex-end; }
+
+    .back-btn {
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--ink2);
+      text-decoration: none;
+      border: 1.5px solid var(--border);
+      padding: .45rem 1.3rem;
+      transition: border-color .2s, color .2s;
+    }
+    .back-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 8% 80px;
+      text-align: center;
+    }
+
+    .coming-inner { max-width: 600px; }
+
+    .coming-icon {
+      font-size: 3.8rem;
+      margin-bottom: 2rem;
+      display: block;
+    }
+
+    .sec-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1.8rem;
+    }
+
+    .sec-label-line {
+      width: 36px; height: 1.5px;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+    }
+
+    .sec-label-text {
+      font-family: var(--display);
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+
+    .coming-h1 {
+      font-family: var(--mincho);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 500;
+      letter-spacing: .1em;
+      line-height: 1.4;
+      margin-bottom: 1.2rem;
+    }
+
+    .coming-sub {
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .3em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      display: block;
+    }
+
+    .coming-lead {
+      font-size: .9rem;
+      color: var(--ink2);
+      line-height: 2.1;
+      letter-spacing: .05em;
+      margin-bottom: 3rem;
+    }
+
+    .coming-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+
+    .feature-cell {
+      background: var(--bg);
+      padding: 1.6rem;
+    }
+
+    .feature-icon { font-size: 1.4rem; margin-bottom: .6rem; display: block; }
+
+    .feature-title {
+      font-family: var(--mincho);
+      font-size: .9rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      margin-bottom: .3rem;
+    }
+
+    .feature-desc {
+      font-size: .78rem;
+      color: var(--ink2);
+      line-height: 1.8;
+    }
+
+    .coming-divider {
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+      margin: 0 auto 2.4rem;
+    }
+
+    .coming-notify {
+      font-size: .84rem;
+      color: var(--ink2);
+      margin-bottom: 1.4rem;
+    }
+
+    .sns-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.8rem;
+    }
+
+    .sns-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .65rem 1.6rem;
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: opacity .2s, transform .2s;
+    }
+
+    .sns-btn:hover { opacity: .85; transform: translateY(-2px); }
+    .sns-btn-x    { background: #000; color: #fff; }
+    .sns-btn-ig   { background: linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color: #fff; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-family: var(--mono);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      color: var(--ink3);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: .15rem;
+      transition: color .2s, border-color .2s;
+    }
+
+    .back-link:hover { color: var(--pink); border-color: var(--pink); }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      padding: 32px 8%;
+      color: rgba(248,246,242,.35);
+      text-align: center;
+    }
+
+    .footer-copy {
+      font-size: .72rem;
+      font-family: var(--mono);
+      letter-spacing: .05em;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0 20px; }
+      .coming-features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html"><img src="logo.jpg" alt="GRASTA" class="logo-img" width="113" height="100" /></a>
+      <div></div>
+      <div class="header-right">
+        <a href="index.html" class="back-btn">← TOP</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="coming-inner">
+      <span class="coming-icon">🍸</span>
+
+      <div class="sec-label">
+        <div class="sec-label-line"></div>
+        <span class="sec-label-text">COMING SOON</span>
+        <div class="sec-label-line"></div>
+      </div>
+
+      <h1 class="coming-h1">グラステBAR</h1>
+      <span class="coming-sub">GRASTA BAR — Opening Soon</span>
+
+      <p class="coming-lead">
+        裏垢女子出展者がスタッフを務める、会員制バー。<br>
+        コラボドリンクと特別な夜をお届けする新業態として、<br>
+        現在オープンに向けて鋭意準備中です。
+      </p>
+
+      <div class="coming-features">
+        <div class="feature-cell">
+          <span class="feature-icon">🍹</span>
+          <p class="feature-title">コラボドリンク</p>
+          <p class="feature-desc">出展者プロデュースのオリジナルカクテルを提供。</p>
+        </div>
+        <div class="feature-cell">
+          <span class="feature-icon">🎭</span>
+          <p class="feature-title">会員制スペース</p>
+          <p class="feature-desc">限定メンバーだけが入れる特別な空間。</p>
+        </div>
+        <div class="feature-cell">
+          <span class="feature-icon">📸</span>
+          <p class="feature-title">フォトブース</p>
+          <p class="feature-desc">SNS映えするフォトスポットを常設予定。</p>
+        </div>
+        <div class="feature-cell">
+          <span class="feature-icon">🎤</span>
+          <p class="feature-title">イベント開催</p>
+          <p class="feature-desc">定期的なライブ・トークイベントを企画中。</p>
+        </div>
+      </div>
+
+      <div class="coming-divider"></div>
+
+      <p class="coming-notify">オープン情報は公式SNSで随時発信します。フォローしてお待ちください。</p>
+
+      <div class="sns-row">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="sns-btn sns-btn-x">𝕏 @grasta_official</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="sns-btn sns-btn-ig">Instagram</a>
+      </div>
+
+      <a href="index.html" class="back-link">← トップページへ戻る</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© 2026 合同会社グラステ / GRASTA LLC. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

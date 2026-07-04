@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMWGEPBMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMWGEPBMND');
+  </script>
+  <title>注意事項・払い戻しポリシー | GRASTA EXPO</title>
+  <link rel="canonical" href="https://gravurestation.jp/terms.html" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta name="description" content="グラステEXPOの注意事項・払い戻しポリシー。入場ルール、持ち込み禁止物、キャンセル・払い戻し手続きを掲載しています。" />
+  <meta name="robots" content="noindex" />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="グラステEXPO" />
+  <meta property="og:title"       content="注意事項・払い戻しポリシー | GRASTA EXPO" />
+  <meta property="og:description" content="グラステEXPOの注意事項・払い戻しポリシー。入場ルール、持ち込み禁止物、キャンセル・払い戻し手続きを掲載。" />
+  <meta property="og:url"         content="https://gravurestation.jp/terms.html" />
+  <meta property="og:image"       content="https://gravurestation.jp/ogp.jpg" />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@grasta_official" />
+  <meta name="twitter:title"       content="注意事項・払い戻しポリシー | GRASTA EXPO" />
+  <meta name="twitter:description" content="グラステEXPOの注意事項・払い戻しポリシー。" />
+  <meta name="twitter:image"       content="https://gravurestation.jp/ogp.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f8f6f2;
+      --bg2:     #f0ede7;
+      --ink:     #1a1612;
+      --ink2:    #5a5450;
+      --ink3:    #9a9390;
+      --pink:    #B51748;
+      --pink2:   #D4476B;
+      --border:  rgba(26,22,18,.1);
+      --display: 'Cinzel', serif;
+      --mincho:  'Shippori Mincho', serif;
+      --sans:    'Noto Sans JP', sans-serif;
+      --mono:    'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: .04em;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(248,246,242,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 5%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo { text-decoration: none; }
+    .logo-img { height: 36px; width: auto; display: block; }
+    .menu-btn {
+      font-family: var(--display);
+      font-size: .65rem;
+      letter-spacing: .22em;
+      background: none;
+      border: 1.5px solid var(--border);
+      padding: .55rem 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      color: var(--ink);
+      transition: border-color .2s;
+    }
+    .menu-btn:hover { border-color: var(--pink); }
+
+    /* ─── DRAWER ─── */
+    .drawer-overlay {
+      position: fixed; inset: 0; background: rgba(26,22,18,.45);
+      z-index: 1100; opacity: 0; pointer-events: none; transition: opacity .3s;
+    }
+    .drawer-overlay.open { opacity: 1; pointer-events: auto; }
+    .drawer {
+      position: fixed; top: 0; right: 0; bottom: 0; width: min(340px, 88vw);
+      background: var(--bg); z-index: 1200; transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      display: flex; flex-direction: column; overflow-y: auto;
+    }
+    .drawer.open { transform: translateX(0); }
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 1.6rem; border-bottom: 1px solid var(--border);
+    }
+    .drawer-logo-img { height: 28px; width: auto; }
+    .drawer-close {
+      background: none; border: none; font-size: 1.1rem;
+      cursor: pointer; color: var(--ink2); padding: .4rem;
+    }
+    .drawer-nav { padding: 1.6rem; flex: 1; }
+    .drawer-nav-label {
+      font-family: var(--display); font-size: .58rem; letter-spacing: .28em;
+      color: var(--ink3); margin-bottom: 1rem;
+    }
+    .drawer-nav-list { list-style: none; display: flex; flex-direction: column; gap: .2rem; }
+    .drawer-nav-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .85rem .6rem; text-decoration: none; color: var(--ink);
+      border-bottom: 1px solid var(--border); font-size: .95rem; letter-spacing: .04em;
+      transition: color .2s;
+    }
+    .drawer-nav-link:hover { color: var(--pink); }
+    .nav-en { font-family: var(--display); font-size: .58rem; letter-spacing: .22em; color: var(--ink3); }
+    .drawer-footer { padding: 1.4rem 1.6rem; border-top: 1px solid var(--border); }
+    .drawer-footer-sns { display: flex; gap: .6rem; margin-bottom: 1rem; }
+    .drawer-sns-icon {
+      width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center; font-size: .9rem;
+      text-decoration: none; color: var(--ink2); transition: border-color .2s, background .2s;
+    }
+    .drawer-sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+    .drawer-footer-copy { font-size: .7rem; color: var(--ink3); letter-spacing: .06em; }
+
+    /* ─── BREADCRUMB ─── */
+    .breadcrumb {
+      margin-top: 70px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+    }
+    .breadcrumb-inner {
+      max-width: 900px; margin: 0 auto; padding: .7rem 5%;
+      font-family: var(--display); font-size: .6rem; letter-spacing: .18em;
+      color: var(--ink3); display: flex; align-items: center; gap: .6rem;
+    }
+    .breadcrumb-inner a { color: var(--ink3); text-decoration: none; }
+    .breadcrumb-inner a:hover { color: var(--pink); }
+    .breadcrumb-sep { opacity: .4; }
+    .breadcrumb-current { color: var(--ink2); }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      max-width: 900px; margin: 0 auto;
+      padding: 5rem 5% 3rem;
+    }
+    .sec-label { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.2rem; }
+    .sec-label-line { flex: 0 0 32px; height: 1px; background: var(--pink); }
+    .sec-label-text { font-family: var(--display); font-size: .62rem; letter-spacing: .28em; color: var(--pink); }
+    .sec-label-diamond { width: 5px; height: 5px; background: var(--pink); transform: rotate(45deg); flex-shrink: 0; }
+    .page-hero-h1 {
+      font-family: var(--mincho); font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 500; letter-spacing: .1em; line-height: 1.4;
+      margin-bottom: 1rem; color: var(--ink);
+    }
+    .page-hero-lead { font-size: .95rem; color: var(--ink2); line-height: 1.9; max-width: 600px; }
+
+    /* ─── CONTENT ─── */
+    .terms-content { max-width: 900px; margin: 0 auto; padding: 0 5% 6rem; }
+
+    .terms-section { margin-bottom: 4rem; }
+    .terms-section-label {
+      font-family: var(--display); font-size: .62rem; letter-spacing: .28em;
+      color: var(--pink); margin-bottom: .8rem;
+    }
+    .terms-section-title {
+      font-family: var(--mincho); font-size: 1.4rem; font-weight: 500;
+      letter-spacing: .1em; color: var(--ink); margin-bottom: 2rem;
+      padding-bottom: .8rem; border-bottom: 1px solid var(--border);
+    }
+
+    .terms-block { margin-bottom: 2rem; }
+    .terms-block-title {
+      font-family: var(--mincho); font-size: 1rem; font-weight: 500;
+      letter-spacing: .08em; color: var(--ink); margin-bottom: .8rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .terms-block-title::before {
+      content: ''; display: block; width: 4px; height: 1em;
+      background: var(--pink); border-radius: 2px; flex-shrink: 0;
+    }
+    .terms-block p { font-size: .92rem; color: var(--ink2); line-height: 1.9; margin-bottom: .6rem; }
+    .terms-block ul { list-style: none; padding: 0; }
+    .terms-block ul li {
+      font-size: .92rem; color: var(--ink2); line-height: 1.9;
+      padding-left: 1.2em; position: relative;
+    }
+    .terms-block ul li::before {
+      content: '—'; position: absolute; left: 0; color: var(--pink); font-size: .7em; top: .3em;
+    }
+
+    .terms-note {
+      background: var(--bg2); border-left: 3px solid var(--pink);
+      padding: 1.2rem 1.6rem; border-radius: 0 6px 6px 0;
+      font-size: .88rem; color: var(--ink2); line-height: 1.9;
+      margin-top: 1.2rem;
+    }
+
+    .refund-table {
+      width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: .9rem;
+    }
+    .refund-table th, .refund-table td {
+      padding: .9rem 1.2rem; text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .refund-table th {
+      font-family: var(--mincho); font-weight: 500; letter-spacing: .06em;
+      background: var(--bg2); white-space: nowrap; width: 35%;
+    }
+    .refund-table td { color: var(--ink2); }
+
+    /* ─── REVEAL ─── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ─── BACK LINK ─── */
+    .back-row { margin-top: 3rem; }
+    .back-link {
+      font-family: var(--display); font-size: .68rem; letter-spacing: .18em;
+      color: var(--ink3); text-decoration: none; transition: color .2s;
+    }
+    .back-link:hover { color: var(--pink); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      color: rgba(248,246,242,.7);
+      padding: 60px 8% 30px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(248,246,242,.1);
+    }
+    .footer-logo {
+      font-family: var(--display); font-size: 1.3rem; letter-spacing: .12em;
+      color: var(--bg); text-decoration: none; display: inline-block; margin-bottom: 1rem;
+    }
+    .footer-logo span { color: var(--pink); }
+    .footer-brand-desc { font-size: .82rem; line-height: 1.9; color: rgba(248,246,242,.5); }
+    .footer-col h4 {
+      font-family: var(--display); font-size: .6rem; letter-spacing: .24em;
+      color: rgba(248,246,242,.4); margin-bottom: 1.2rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+    .footer-col ul a {
+      font-size: .85rem; color: rgba(248,246,242,.6); text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-col ul a:hover { color: var(--pink2); }
+    .footer-col ul span.footer-soon {
+      font-size: .85rem; color: rgba(248,246,242,.3); cursor: default;
+    }
+    .footer-bottom {
+      padding-top: 2rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-copy { font-size: .75rem; letter-spacing: .08em; color: rgba(248,246,242,.3); }
+    .footer-sns { display: flex; gap: .6rem; }
+    .sns-icon {
+      width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center; font-size: .85rem;
+      text-decoration: none; color: rgba(248,246,242,.5); transition: border-color .2s, background .2s;
+    }
+    .sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    @media (max-width: 768px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HOME",
+        "item": "https://gravurestation.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "注意事項・払い戻しポリシー",
+        "item": "https://gravurestation.jp/terms.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- DRAWER OVERLAY -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- MENU DRAWER -->
+  <aside class="drawer" id="drawer" aria-label="ナビゲーション">
+    <div class="drawer-header">
+      <span><img src="logo.jpg" alt="GRASTA" class="drawer-logo-img" width="113" height="100" /></span>
+      <button class="drawer-close" id="drawer-close" aria-label="閉じる">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <p class="drawer-nav-label">Navigation</p>
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="index.html#hero" class="drawer-nav-link"><span>トップ</span><span class="nav-en">TOP</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#about" class="drawer-nav-link"><span>イベント概要</span><span class="nav-en">ABOUT</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#contents" class="drawer-nav-link"><span>体験できること</span><span class="nav-en">CONTENTS</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#lineup" class="drawer-nav-link"><span>参加出展者</span><span class="nav-en">LINEUP</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="ticket.html" class="drawer-nav-link"><span>チケット</span><span class="nav-en">TICKET</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#faq" class="drawer-nav-link"><span>よくある質問</span><span class="nav-en">FAQ</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="safety.html" class="drawer-nav-link"><span>安心・安全</span><span class="nav-en">SAFETY</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="station.html" class="drawer-nav-link"><span>グラビアステーション</span><span class="nav-en">STATION</span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <div class="drawer-footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="Instagram">📷</a>
+        <a class="drawer-sns-icon" title="TikTok">🎵</a>
+      </div>
+      <p class="drawer-footer-copy">© 2026 合同会社グラステ / GRASTA LLC.</p>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="GRASTA" class="logo-img" width="113" height="100" /></a>
+      <div></div>
+      <div class="header-right">
+        <button class="menu-btn" id="menu-btn">MENU</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">HOME</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">TERMS &amp; REFUND</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero reveal">
+    <div class="sec-label">
+      <div class="sec-label-line"></div>
+      <span class="sec-label-text">TERMS &amp; REFUND</span>
+      <div class="sec-label-diamond"></div>
+    </div>
+    <h1 class="page-hero-h1">注意事項・払い戻しポリシー</h1>
+    <p class="page-hero-lead">ご来場前に必ずご確認ください。ご不明な点はお問い合わせフォームよりお気軽にご連絡ください。</p>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="terms-content">
+
+    <!-- 注意事項 -->
+    <div class="terms-section reveal">
+      <p class="terms-section-label">SECTION 01</p>
+      <h2 class="terms-section-title">注意事項</h2>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">入場について</h3>
+        <ul>
+          <li>本イベントは18歳以上の方のみご入場いただけます。入場時に公的身分証明書（運転免許証・学生証・パスポートなど）の提示をお求めします。</li>
+          <li>チケットのご予約後、確認メールを必ずご確認ください。当日は受付にてお名前をお伝えください。</li>
+          <li>入場時間になっても到着されない場合、席の確保ができかねる場合があります。</li>
+          <li>チケットの転売・譲渡は固く禁じます。確認できた場合は入場をお断りする場合があります。</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">持ち込み禁止物</h3>
+        <ul>
+          <li>危険物（刃物・爆発物・花火など）</li>
+          <li>アルコール類（会場内のグラステBARをご利用ください）</li>
+          <li>ペット・動物</li>
+          <li>大型の荷物・キャリーケース（クロークをご利用ください）</li>
+          <li>その他、主催者が不適切と判断するもの</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">会場内での禁止事項</h3>
+        <ul>
+          <li>出演者への無断での接触・追尾・つきまとい</li>
+          <li>会場内での動画・音声の無断録画・録音</li>
+          <li>他の来場者・スタッフへの迷惑行為・ハラスメント</li>
+          <li>無許可の物販・勧誘・宗教的勧誘行為</li>
+          <li>喫煙（所定の喫煙所以外）</li>
+          <li>泥酔状態での入場・会場内での過度な飲酒</li>
+        </ul>
+        <div class="terms-note">
+          上記の禁止事項に違反した場合、警告なしに退場いただく場合があります。悪質な行為については、警察への通報および法的措置を講じる場合があります。
+        </div>
+      </div>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">撮影・SNS投稿について</h3>
+        <ul>
+          <li>会場内の一般的な写真撮影は可能です（フラッシュ撮影禁止）。</li>
+          <li>出演者の撮影は、各出演者が定めるルールに従ってください。</li>
+          <li>SNSへの投稿は自由ですが、他の来場者が映り込んでいる場合は配慮をお願いします。</li>
+          <li>ステージ・イベント全体の動画録画・配信は禁止です。</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">その他</h3>
+        <ul>
+          <li>会場内での事故・盗難について、主催者は責任を負いかねます。貴重品は各自で管理してください。</li>
+          <li>体調不良・緊急時はスタッフにお声がけください。ヘルプデスクを設置しています。</li>
+          <li>荷物の一時預かり（クローク）は会場入口付近に設置予定です。</li>
+          <li>会場周辺の駐車場は有料です。公共交通機関のご利用を強くおすすめします。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 払い戻しポリシー -->
+    <div id="refund" class="terms-section reveal">
+      <p class="terms-section-label">SECTION 02</p>
+      <h2 class="terms-section-title">払い戻しポリシー</h2>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">キャンセル・払い戻し期限</h3>
+        <table class="refund-table">
+          <tr>
+            <th>開催7日前まで</th>
+            <td>払い戻し可能（手数料無料）</td>
+          </tr>
+          <tr>
+            <th>開催6日前〜前日</th>
+            <td>払い戻し不可</td>
+          </tr>
+          <tr>
+            <th>当日・無断欠席</th>
+            <td>払い戻し不可</td>
+          </tr>
+        </table>
+        <div class="terms-note">
+          払い戻し希望の場合は、期限内にお問い合わせフォームまたは公式メール（info@gravurestation.jp）よりご連絡ください。
+        </div>
+      </div>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">払い戻し手続き</h3>
+        <ul>
+          <li>お問い合わせフォームより「チケットキャンセル希望」の旨とご予約名・メールアドレスをご連絡ください。</li>
+          <li>確認後、3営業日以内にご連絡いたします。</li>
+          <li>払い戻しはご予約時のお支払い方法に準じます。</li>
+          <li>振込手数料等が発生する場合は実費をご負担いただく場合があります。</li>
+        </ul>
+      </div>
+
+      <div class="terms-block">
+        <h3 class="terms-block-title">イベント中止・延期の場合</h3>
+        <ul>
+          <li>天災・自然災害・行政指導などやむを得ない事情によりイベントが中止・延期となった場合は、チケット代金を全額払い戻しいたします。</li>
+          <li>払い戻し手続きの詳細は、公式SNSおよびご登録メールアドレス宛にご案内します。</li>
+          <li>交通費・宿泊費など、チケット代金以外の費用については補償いたしかねます。</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="back-row reveal">
+      <a href="index.html" class="back-link">← トップページに戻る</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">GRASTA<span>.</span></a>
+        <p class="footer-brand-desc">ネットで見かけるあの子にリアルで会える、新感覚の展示会型イベント。<br>合同会社グラステが贈る新しいエンタテイメント体験。</p>
+      </div>
+      <div class="footer-col">
+        <h4>EVENT</h4>
+        <ul>
+          <li><a href="index.html#about">イベント概要</a></li>
+          <li><a href="index.html#lineup">出演者</a></li>
+          <li><a href="index.html#schedule">スケジュール</a></li>
+          <li><a href="index.html#access">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>TICKET</h4>
+        <ul>
+          <li><a href="ticket.html">チケット購入</a></li>
+          <li><a href="ticket.html">料金・特典</a></li>
+          <li><a href="terms.html">注意事項</a></li>
+          <li><a href="terms.html#refund">払い戻しポリシー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="company.html">合同会社グラステ</a></li>
+          <li><a href="station.html">グラビアステーション</a></li>
+          <li><a href="bar.html">グラステBAR</a></li>
+          <li><a href="index.html#contact">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 合同会社グラステ / GRASTA LLC. All Rights Reserved.</p>
+      <div class="footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="Instagram">📷</a>
+        <a class="sns-icon" title="TikTok">🎵</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── ドロワー ──
+    const menuBtn    = document.getElementById('menu-btn');
+    const drawer     = document.getElementById('drawer');
+    const overlay    = document.getElementById('drawer-overlay');
+    const closeBtn   = document.getElementById('drawer-close');
+    function openDrawer()  { drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; }
+    menuBtn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    overlay.addEventListener('click', closeDrawer);
+
+    // ── スクロールアニメーション ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer  = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

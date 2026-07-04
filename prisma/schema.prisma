@@ -1,0 +1,252 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  READER
+  WRITER
+  ADMIN
+}
+
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+  PRIVATE
+}
+
+enum TagCategory {
+  AREA
+  SERVICE
+  PRICE
+  FREE
+}
+
+enum TransactionType {
+  PURCHASE_POINTS
+  EARN
+  SPEND
+  EXPIRE
+}
+
+enum WithdrawalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  PAID
+}
+
+enum NotificationType {
+  LIKE
+  COMMENT
+  FOLLOW
+  PURCHASE
+  WITHDRAWAL
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  emailVerified DateTime?
+  passwordHash  String?
+  displayName   String    @default("")
+  avatarUrl     String?
+  bio           String?
+  area          String?
+  role          Role      @default(READER)
+  pointBalance  Int       @default(0)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  accounts           Account[]
+  sessions           Session[]
+  articles           Article[]
+  purchases          Purchase[]
+  pointsTransactions PointsTransaction[]
+  withdrawalRequests WithdrawalRequest[]
+  likes              Like[]
+  bookmarks          Bookmark[]
+  comments           Comment[]
+  notifications      Notification[]
+  following          Follow[]            @relation("Follower")
+  followers          Follow[]            @relation("Followee")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Article {
+  id              String        @id @default(cuid())
+  userId          String
+  title           String
+  body            String        @db.Text
+  summary         String?
+  thumbnailUrl    String?
+  status          ArticleStatus @default(DRAFT)
+  pricePt         Int           @default(0)
+  previewPosition Int?
+  isFeatured      Boolean       @default(false)
+  publishedAt     DateTime?
+  viewCount       Int           @default(0)
+  likeCount       Int           @default(0)
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tags      ArticleTag[]
+  purchases Purchase[]
+  likes     Like[]
+  bookmarks Bookmark[]
+  comments  Comment[]
+}
+
+model Tag {
+  id       String      @id @default(cuid())
+  name     String      @unique
+  slug     String      @unique
+  category TagCategory @default(FREE)
+
+  articles ArticleTag[]
+}
+
+model ArticleTag {
+  articleId String
+  tagId     String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  tag       Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([articleId, tagId])
+}
+
+model Purchase {
+  id        String   @id @default(cuid())
+  userId    String
+  articleId String
+  ptSpent   Int
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, articleId])
+}
+
+model PointsTransaction {
+  id           String          @id @default(cuid())
+  userId       String
+  type         TransactionType
+  amount       Int
+  balanceAfter Int
+  refId        String?
+  createdAt    DateTime        @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model WithdrawalRequest {
+  id          String           @id @default(cuid())
+  userId      String
+  amountPt    Int
+  status      WithdrawalStatus @default(PENDING)
+  bankInfo    String
+  requestedAt DateTime         @default(now())
+  processedAt DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Follow {
+  followerId String
+  followeeId String
+  createdAt  DateTime @default(now())
+
+  follower User @relation("Follower", fields: [followerId], references: [id], onDelete: Cascade)
+  followee User @relation("Followee", fields: [followeeId], references: [id], onDelete: Cascade)
+
+  @@id([followerId, followeeId])
+}
+
+model Like {
+  userId    String
+  articleId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, articleId])
+}
+
+model Bookmark {
+  userId    String
+  articleId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  article Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+
+  @@id([userId, articleId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  userId    String
+  articleId String
+  parentId  String?
+  body      String
+  hidden    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  article Article   @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  parent  Comment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies Comment[] @relation("CommentReplies")
+}
+
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  actorId   String?
+  type      NotificationType
+  refId     String?
+  message   String?
+  readAt    DateTime?
+  createdAt DateTime         @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

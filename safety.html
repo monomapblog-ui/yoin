@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMWGEPBMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMWGEPBMND');
+  </script>
+  <title>安心・安全への取り組み | GRASTA EXPO</title>
+  <link rel="canonical" href="https://gravurestation.jp/safety.html" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+  <meta name="description" content="グラステEXPOの安心・安全への取り組み。入場ルール、会場内禁止事項、セキュリティ体制、違反時の対応を掲載しています。" />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="グラステEXPO" />
+  <meta property="og:title"       content="安心・安全への取り組み | GRASTA EXPO" />
+  <meta property="og:description" content="グラステEXPOの安心・安全への取り組み。入場ルール、会場内禁止事項、セキュリティ体制、違反時の対応を掲載しています。" />
+  <meta property="og:url"         content="https://gravurestation.jp/safety.html" />
+  <meta property="og:image"       content="https://gravurestation.jp/ogp.jpg" />
+  <meta property="og:locale"      content="ja_JP" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@grasta_official" />
+  <meta name="twitter:title"       content="安心・安全への取り組み | GRASTA EXPO" />
+  <meta name="twitter:description" content="グラステEXPOの安心・安全への取り組み。入場ルール、禁止事項、セキュリティ体制を掲載。" />
+  <meta name="twitter:image"       content="https://gravurestation.jp/ogp.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap"
+        as="style"
+        onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f8f6f2;
+      --bg2:     #f0ede7;
+      --ink:     #1a1612;
+      --ink2:    #5a5450;
+      --ink3:    #9a9390;
+      --pink:    #B51748;
+      --pink2:   #D4476B;
+      --purple:  #8b52d6;
+      --gold:    #c8924a;
+      --border:  rgba(26,22,18,.1);
+      --display: 'Cinzel', serif;
+      --mincho:  'Shippori Mincho', serif;
+      --sans:    'Noto Sans JP', sans-serif;
+      --mono:    'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: .04em;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(248,246,242,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 64px;
+      padding: 0 40px;
+    }
+
+    .logo { display: block; }
+    .logo-img { height: 36px; width: auto; display: block; }
+
+    .header-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .menu-btn {
+      font-family: var(--mono);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      color: var(--ink);
+      background: transparent;
+      border: 1.5px solid var(--ink);
+      padding: .5rem 1.6rem;
+      cursor: pointer;
+      transition: background .25s, color .25s;
+    }
+
+    .menu-btn:hover { background: var(--ink); color: var(--bg); }
+
+    /* ─── BREADCRUMB ─── */
+    .breadcrumb {
+      padding: 100px 8% 0;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb-inner {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    .breadcrumb a {
+      color: var(--ink3);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb-sep { opacity: .4; }
+    .breadcrumb-current { color: var(--ink2); }
+
+    /* ─── SECTION LABEL ─── */
+    .sec-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 2.4rem;
+    }
+
+    .sec-label-line {
+      width: 36px; height: 1.5px;
+      background: linear-gradient(90deg, var(--pink), var(--purple));
+    }
+
+    .sec-label-text {
+      font-family: var(--display);
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+
+    .sec-label-diamond {
+      width: 6px; height: 6px;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      padding: 60px 8% 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-hero-h1 {
+      font-family: var(--mincho);
+      font-size: clamp(1.9rem, 4vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: .1em;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero-lead {
+      font-size: .88rem;
+      color: var(--ink2);
+      line-height: 2.1;
+      letter-spacing: .05em;
+      max-width: 540px;
+    }
+
+    /* ─── SAFETY CONTENT ─── */
+    .safety-content {
+      padding: 0 8% 120px;
+    }
+
+    .safety-inner { max-width: 860px; margin: 0 auto; }
+
+    .safety-commitment {
+      background: var(--ink);
+      padding: 3.6rem 4rem;
+      margin-bottom: 2px;
+    }
+
+    .safety-commitment-eyebrow {
+      font-family: var(--display);
+      font-size: .6rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink2);
+      margin-bottom: 1.4rem;
+    }
+
+    .safety-commitment-text {
+      font-family: var(--mincho);
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      font-weight: 500;
+      line-height: 1.65;
+      letter-spacing: .1em;
+      color: #fff;
+      margin-bottom: 1.4rem;
+    }
+
+    .safety-commitment-body {
+      font-size: .86rem;
+      color: rgba(248,246,242,.6);
+      line-height: 2.1;
+      letter-spacing: .05em;
+      max-width: 540px;
+    }
+
+    .safety-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .safety-block {
+      background: var(--bg2);
+      padding: 3rem 3.6rem;
+    }
+
+    .safety-block-header {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      margin-bottom: 2.4rem;
+      padding-bottom: 1.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .safety-icon-wrap {
+      width: 48px; height: 48px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+    }
+
+    .safety-block-en {
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: .3rem;
+    }
+
+    .safety-block-title {
+      font-family: var(--mincho);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+    }
+
+    .safety-rule-list { list-style: none; }
+
+    .safety-rule-item {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 1.8rem;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .safety-rule-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .rule-icon {
+      width: 48px; height: 48px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .rule-tag {
+      font-family: var(--display);
+      font-size: .54rem;
+      font-weight: 400;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--pink);
+      display: block;
+      margin-bottom: .5rem;
+    }
+
+    .rule-title {
+      font-family: var(--mincho);
+      font-size: .98rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      margin-bottom: .5rem;
+    }
+
+    .rule-body {
+      font-size: .82rem;
+      color: var(--ink2);
+      line-height: 2;
+      letter-spacing: .04em;
+    }
+
+    .safety-penalty {
+      background: var(--ink);
+      padding: 3rem 3.6rem;
+      margin-top: 2px;
+    }
+
+    .safety-penalty .safety-block-header { border-bottom-color: rgba(248,246,242,.1); }
+    .safety-penalty .safety-icon-wrap { background: rgba(248,246,242,.06); border-color: rgba(248,246,242,.15); }
+    .safety-penalty .safety-block-en { color: var(--pink2); }
+    .safety-penalty .safety-block-title { color: var(--bg); }
+    .safety-penalty .safety-rule-item { border-bottom-color: rgba(248,246,242,.1); }
+    .safety-penalty .rule-icon { background: rgba(248,246,242,.06); border-color: rgba(248,246,242,.15); }
+    .safety-penalty .rule-tag { color: var(--pink2); }
+    .safety-penalty .rule-title { color: rgba(248,246,242,.9); }
+    .safety-penalty .rule-body { color: rgba(248,246,242,.55); }
+
+    /* ─── BACK LINK ─── */
+    .back-row {
+      max-width: 860px;
+      margin: 3rem auto 0;
+    }
+
+    .back-link {
+      font-family: var(--display);
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      transition: color .2s;
+    }
+
+    .back-link:hover { color: var(--pink); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(248,246,242,.08);
+      padding: 60px 8% 32px;
+      color: rgba(248,246,242,.7);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--bg);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo span { color: var(--pink2); }
+
+    .footer-brand-desc { font-size: .8rem; line-height: 1.9; }
+
+    .footer-col h4 {
+      font-family: var(--mono);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,.4);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: .65rem; }
+
+    .footer-col a {
+      font-size: .8rem;
+      color: rgba(248,246,242,.6);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover { color: var(--pink2); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(248,246,242,.08);
+      padding-top: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy { font-size: .72rem; color: rgba(248,246,242,.35); }
+
+    .footer-sns { display: flex; gap: .8rem; }
+
+    .sns-icon {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      text-decoration: none;
+    }
+
+    .sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    /* ─── MENU DRAWER ─── */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26,22,18,.6);
+      z-index: 1100;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .4s cubic-bezier(.16,1,.3,1);
+      backdrop-filter: blur(4px);
+    }
+
+    .drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+    .drawer {
+      position: fixed;
+      top: 0; right: 0;
+      width: min(420px, 100vw);
+      height: 100%;
+      background: var(--ink);
+      z-index: 1200;
+      transform: translateX(100%);
+      transition: transform .5s cubic-bezier(.16,1,.3,1);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.6rem 2.4rem;
+      border-bottom: 1px solid rgba(248,246,242,.08);
+      flex-shrink: 0;
+    }
+
+    .drawer-logo-img { height: 32px; filter: brightness(0) invert(1); }
+
+    .drawer-close {
+      width: 40px; height: 40px;
+      background: transparent;
+      border: 1.5px solid rgba(248,246,242,.2);
+      color: var(--bg);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .2s, background .2s;
+    }
+
+    .drawer-close:hover { border-color: var(--pink2); background: rgba(181,23,72,.15); }
+
+    .drawer-nav { padding: 2.4rem; flex: 1; }
+
+    .drawer-nav-label {
+      font-family: var(--mono);
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .28em;
+      color: rgba(248,246,242,.3);
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+    }
+
+    .drawer-nav-list { list-style: none; }
+    .drawer-nav-item { border-bottom: 1px solid rgba(248,246,242,.06); }
+
+    .drawer-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 0;
+      text-decoration: none;
+      color: rgba(248,246,242,.85);
+      font-family: var(--mincho);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      transition: color .2s, padding-left .2s;
+    }
+
+    .drawer-nav-link:hover { color: var(--pink2); padding-left: .5rem; }
+
+    .drawer-nav-link .nav-en {
+      font-family: var(--mono);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: rgba(248,246,242,.3);
+      text-transform: uppercase;
+    }
+
+    .drawer-nav-link:hover .nav-en { color: var(--pink2); }
+
+    .drawer-footer {
+      padding: 2rem 2.4rem;
+      border-top: 1px solid rgba(248,246,242,.08);
+      flex-shrink: 0;
+    }
+
+    .drawer-footer-sns { display: flex; gap: .6rem; margin-bottom: 1.4rem; }
+
+    .drawer-sns-icon {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      text-decoration: none;
+      color: rgba(248,246,242,.6);
+    }
+
+    .drawer-sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    .drawer-footer-copy {
+      font-size: .68rem;
+      color: rgba(248,246,242,.25);
+      font-family: var(--mono);
+      letter-spacing: .05em;
+    }
+
+    /* ─── ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1);
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    .d1 { transition-delay: .05s; }
+    .d2 { transition-delay: .12s; }
+    .d3 { transition-delay: .19s; }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 960px) {
+      .safety-block { padding: 2rem 1.8rem; }
+      .safety-commitment { padding: 2.4rem 1.8rem; }
+      .safety-penalty { padding: 2rem 1.8rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0 20px; }
+      .page-hero { padding: 60px 6% 60px; }
+      .safety-content { padding: 0 6% 80px; }
+      .safety-rule-item { grid-template-columns: 44px 1fr; gap: 1rem; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "HOME",
+        "item": "https://gravurestation.jp/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "安心・安全への取り組み",
+        "item": "https://gravurestation.jp/safety.html"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- DRAWER OVERLAY -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- MENU DRAWER -->
+  <aside class="drawer" id="drawer" aria-label="ナビゲーション">
+    <div class="drawer-header">
+      <span><img src="logo.jpg" alt="GRASTA" class="drawer-logo-img" width="113" height="100" /></span>
+      <button class="drawer-close" id="drawer-close" aria-label="閉じる">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <p class="drawer-nav-label">Navigation</p>
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item">
+          <a href="index.html#hero" class="drawer-nav-link"><span>トップ</span><span class="nav-en">TOP</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#about" class="drawer-nav-link"><span>イベント概要</span><span class="nav-en">ABOUT</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#contents" class="drawer-nav-link"><span>体験できること</span><span class="nav-en">CONTENTS</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#lineup" class="drawer-nav-link"><span>参加出展者</span><span class="nav-en">LINEUP</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#ticket" class="drawer-nav-link"><span>チケット</span><span class="nav-en">TICKET</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#schedule" class="drawer-nav-link"><span>スケジュール</span><span class="nav-en">SCHEDULE</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#business" class="drawer-nav-link"><span>グラステの世界観</span><span class="nav-en">UNIVERSE</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="index.html#access" class="drawer-nav-link"><span>アクセス</span><span class="nav-en">ACCESS</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="safety.html" class="drawer-nav-link"><span>安心・安全</span><span class="nav-en">SAFETY</span></a>
+        </li>
+        <li class="drawer-nav-item">
+          <a href="station.html" class="drawer-nav-link"><span>グラビアステーション</span><span class="nav-en">STATION</span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <div class="drawer-footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="Instagram">📷</a>
+        <a class="drawer-sns-icon" title="TikTok">🎵</a>
+      </div>
+      <p class="drawer-footer-copy">© 2026 合同会社グラステ / GRASTA LLC.</p>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="GRASTA" class="logo-img" width="113" height="100" /></a>
+      <div></div>
+      <div class="header-right">
+        <button class="menu-btn" id="menu-btn">MENU</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">HOME</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">TRUST &amp; SAFETY</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero reveal">
+    <div class="sec-label">
+      <div class="sec-label-line"></div>
+      <span class="sec-label-text">TRUST &amp; SAFETY</span>
+      <div class="sec-label-diamond"></div>
+    </div>
+    <h1 class="page-hero-h1">安心・安全への取り組み</h1>
+    <p class="page-hero-lead">来場者・出演出展者・スポンサーすべての方が心から楽しめる場を。グラステEXPOが誓う、最高水準の管理体制。</p>
+  </div>
+
+  <!-- SAFETY CONTENT -->
+  <div class="safety-content">
+    <div class="safety-inner">
+
+      <!-- Commitment -->
+      <div class="safety-commitment reveal">
+        <p class="safety-commitment-eyebrow">ORGANIZER'S COMMITMENT</p>
+        <p class="safety-commitment-text">すべての方に、最高の熱狂と<br>圧倒的な安心を。</p>
+        <p class="safety-commitment-body">グラステEXPOは、ご来場いただく皆様・ご出演いただく出展者の皆様・ご支援いただくスポンサー企業の皆様、すべての方に対して安全で公正な環境を提供することを最大の使命とします。徹底したルール運用と専門スタッフの配置により、いかなる違反行為も容認せず、迅速かつ毅然とした対応を行うことをここに誓います。</p>
+      </div>
+
+      <div class="safety-blocks">
+
+        <!-- Admission Policy -->
+        <div class="safety-block reveal">
+          <div class="safety-block-header">
+            <div class="safety-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B51748" stroke-width="1.5" stroke-linecap="round">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <circle cx="8.5" cy="12" r="2.5"/>
+                <line x1="13" y1="9" x2="20" y2="9"/>
+                <line x1="13" y1="12" x2="20" y2="12"/>
+                <line x1="13" y1="15" x2="17" y2="15"/>
+              </svg>
+            </div>
+            <div>
+              <p class="safety-block-en">ADMISSION POLICY</p>
+              <h2 class="safety-block-title">ご入場に関するルール</h2>
+            </div>
+          </div>
+          <ul class="safety-rule-list">
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke-linecap="round">
+                  <rect x="3" y="3" width="30" height="30" rx="3" stroke="#1a1612" stroke-width="1.5"/>
+                  <text x="18" y="24" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="800" fill="#1a1612">18+</text>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">AGE VERIFICATION</span>
+                <p class="rule-title">18歳未満の入場不可</p>
+                <p class="rule-body">入場時に顔写真付き身分証明書（運転免許証・パスポート・マイナンバーカード等）による年齢確認・本人確認を100%実施します。ご提示いただけない場合は、いかなる理由があっても入場をお断りします。</p>
+              </div>
+            </li>
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#1a1612" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 3L31 8V17C31 25.5 18 33 18 33C18 33 5 25.5 5 17V8L18 3Z"/>
+                  <line x1="12" y1="12" x2="24" y2="24"/>
+                  <line x1="24" y1="12" x2="12" y2="24"/>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">PROHIBITED ENTRY</span>
+                <p class="rule-title">反社会的勢力および不適切と判断された方の入場禁止</p>
+                <p class="rule-body">反社会的勢力に属する方、または運営スタッフが入場不適切と判断した方の入場は固くお断りします。不審な言動が見られた場合は、入場後であっても即刻退場を命じます。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Code of Conduct -->
+        <div class="safety-block reveal">
+          <div class="safety-block-header">
+            <div class="safety-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B51748" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/>
+                <rect x="9" y="3" width="6" height="4" rx="1"/>
+                <line x1="9" y1="13" x2="15" y2="13"/>
+                <line x1="9" y1="17" x2="12" y2="17"/>
+              </svg>
+            </div>
+            <div>
+              <p class="safety-block-en">CODE OF CONDUCT</p>
+              <h2 class="safety-block-title">会場内での禁止事項</h2>
+            </div>
+          </div>
+          <ul class="safety-rule-list">
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 12h4l3-4h14l3 4h4v16H4V12z" stroke="#1a1612" stroke-width="1.5"/>
+                  <circle cx="18" cy="20" r="5" stroke="#1a1612" stroke-width="1.5"/>
+                  <line x1="6" y1="6" x2="30" y2="30" stroke="#B51748" stroke-width="2"/>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">PHOTOGRAPHY</span>
+                <p class="rule-title">撮影・掲載時の許可について</p>
+                <p class="rule-body">撮影を行う際には必ず被写体の許可を得てください。また、撮影した画像をインターネット等に掲載する場合にも、必ず被写体の許可を得てください。無断での録音・録画・SNS投稿はご遠慮ください。</p>
+              </div>
+            </li>
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke-linecap="round">
+                  <path d="M18 6V21M15 9V21M12 12V21M21 10V21M24 14V21" stroke="#1a1612" stroke-width="1.5"/>
+                  <path d="M12 21C12 21 10 22 10 25C10 29 13 31 18 31C23 31 26 29 26 25V21H12Z" stroke="#1a1612" stroke-width="1.5" stroke-linejoin="round"/>
+                  <circle cx="28" cy="10" r="5" fill="#f8f6f2" stroke="#B51748" stroke-width="1.5"/>
+                  <line x1="24.5" y1="10" x2="31.5" y2="10" stroke="#B51748" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">NO UNWANTED CONTACT</span>
+                <p class="rule-title">出演出展者への無断接触の禁止</p>
+                <p class="rule-body">出演出展者への同意のないボディタッチ、イベント終了後の出待ち・追跡、SNSアカウントや連絡先の強要は厳禁です。出展者が不快と感じる一切の行為を禁止します。</p>
+              </div>
+            </li>
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke-linecap="round">
+                  <path d="M4 18C4 18 9 9 18 9C27 9 32 18 32 18C32 18 27 27 18 27C9 27 4 18 4 18Z" stroke="#1a1612" stroke-width="1.5"/>
+                  <circle cx="18" cy="18" r="4.5" stroke="#1a1612" stroke-width="1.5"/>
+                  <line x1="6" y1="6" x2="30" y2="30" stroke="#B51748" stroke-width="2"/>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">PRIVACY PROTECTION</span>
+                <p class="rule-title">他の来場者のプライバシー侵害禁止</p>
+                <p class="rule-body">他の来場者の身元を探る行為、本人の許可なくSNSへの実名・顔写真・特徴の公開は禁止します。本イベントは参加者全員のプライバシーを最大限尊重します。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Security & Support -->
+        <div class="safety-block reveal">
+          <div class="safety-block-header">
+            <div class="safety-icon-wrap">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B51748" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L21 6V12C21 17.5 12 22 12 22C12 22 3 17.5 3 12V6L12 2Z"/>
+                <polyline points="8.5,12 11,14.5 15.5,10"/>
+              </svg>
+            </div>
+            <div>
+              <p class="safety-block-en">SECURITY &amp; SUPPORT</p>
+              <h2 class="safety-block-title">セキュリティ体制</h2>
+            </div>
+          </div>
+          <ul class="safety-rule-list">
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#1a1612" stroke-width="1.5" stroke-linecap="round">
+                  <circle cx="18" cy="11" r="5"/>
+                  <path d="M7 32C7 26 11.5 22 18 22C24.5 22 29 26 29 32"/>
+                  <path d="M14 22L14 29L18 31.5L22 29L22 22" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">PROFESSIONAL SECURITY</span>
+                <p class="rule-title">プロ警備員の常駐</p>
+                <p class="rule-body">会場内外にプロの警備員（セキュリティスタッフ）を常駐配置します。入退場口・フロア・バックヤードを含む全エリアを巡回し、安全な環境を維持します。</p>
+              </div>
+            </li>
+            <li class="safety-rule-item">
+              <div class="rule-icon">
+                <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="#1a1612" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 7H31V26H20L12 33V26H5V7Z"/>
+                  <line x1="18" y1="14" x2="18" y2="19"/>
+                  <circle cx="18" cy="22.5" r="1.3" fill="#1a1612" stroke="none"/>
+                </svg>
+              </div>
+              <div>
+                <span class="rule-tag">HELP DESK</span>
+                <p class="rule-title">相談窓口・巡回スタッフの設置</p>
+                <p class="rule-body">困ったこと・不安なことがあれば、いつでもヘルプデスクまたは巡回スタッフにご相談ください。「STAFF」ビブスを着用したスタッフが会場内を常時巡回しています。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Penalty -->
+      <div class="safety-penalty reveal">
+        <div class="safety-block-header">
+          <div class="safety-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(248,246,242,.75)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L21 6V12C21 17.5 12 22 12 22C12 22 3 17.5 3 12V6L12 2Z"/>
+              <line x1="12" y1="8" x2="12" y2="14"/>
+              <circle cx="12" cy="17" r="0.9" fill="rgba(248,246,242,.75)" stroke="none"/>
+            </svg>
+          </div>
+          <div>
+            <p class="safety-block-en">PENALTY</p>
+            <h2 class="safety-block-title">違反時の対応</h2>
+          </div>
+        </div>
+        <ul class="safety-rule-list">
+          <li class="safety-rule-item">
+            <div class="rule-icon">
+              <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="rgba(248,246,242,.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="4" width="20" height="28" rx="2"/>
+                <line x1="10" y1="14" x2="20" y2="14"/>
+                <line x1="10" y1="19" x2="20" y2="19"/>
+                <line x1="10" y1="24" x2="15" y2="24"/>
+                <line x1="27" y1="4" x2="35" y2="12" stroke="#D4476B"/>
+                <line x1="35" y1="4" x2="27" y2="12" stroke="#D4476B"/>
+              </svg>
+            </div>
+            <div>
+              <span class="rule-tag">IMMEDIATE REMOVAL</span>
+              <p class="rule-title">即刻退場・チケット代金の返金なし</p>
+              <p class="rule-body">上記ルールに違反した方には、いかなる理由があっても即刻退場を命じます。チケット代金の返金は一切行いません。退場措置はスタッフの判断のみに基づき実施されます。</p>
+            </div>
+          </li>
+          <li class="safety-rule-item">
+            <div class="rule-icon">
+              <svg width="28" height="28" viewBox="0 0 36 36" fill="none" stroke="rgba(248,246,242,.6)" stroke-width="1.5" stroke-linecap="round">
+                <circle cx="18" cy="18" r="14"/>
+                <line x1="18" y1="10" x2="18" y2="21"/>
+                <circle cx="18" cy="25.5" r="1.5" fill="rgba(248,246,242,.6)" stroke="none"/>
+              </svg>
+            </div>
+            <div>
+              <span class="rule-tag">LEGAL ACTION</span>
+              <p class="rule-title">悪質な行為には法的措置を講じます</p>
+              <p class="rule-body">撮影・接触・脅迫・器物損壊など悪質と判断された行為に対しては、警察・法的機関への即時通報および民事・刑事の両面から法的措置を講じます。被害者の保護を最優先とし、徹底的に対応します。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="back-row reveal">
+        <a href="index.html" class="back-link">← トップページに戻る</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">GRASTA<span>.</span></a>
+        <p class="footer-brand-desc">ネットで見かけるあの子にリアルで会える、新感覚の展示会型イベント。<br>合同会社グラステが贈る新しいエンタテイメント体験。</p>
+      </div>
+      <div class="footer-col">
+        <h4>EVENT</h4>
+        <ul>
+          <li><a href="index.html#about">イベント概要</a></li>
+          <li><a href="index.html#lineup">出演者</a></li>
+          <li><a href="index.html#schedule">スケジュール</a></li>
+          <li><a href="index.html#access">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>TICKET</h4>
+        <ul>
+          <li><a href="ticket.html">チケット購入</a></li>
+          <li><a href="ticket.html">料金・特典</a></li>
+          <li><a href="terms.html">注意事項</a></li>
+          <li><a href="terms.html#refund">払い戻しポリシー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="company.html">合同会社グラステ</a></li>
+          <li><span style="font-size:.85rem;color:rgba(248,246,242,.3);">グラビアステーション</span></li>
+          <li><a href="bar.html">グラステBAR</a></li>
+          <li><a href="index.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 合同会社グラステ / GRASTA LLC. All Rights Reserved.</p>
+      <div class="footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="Instagram">📷</a>
+        <a class="sns-icon" title="TikTok">🎵</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── スクロールアニメーション ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── MENU ドロワー ──
+    const drawer = document.getElementById('drawer');
+    const drawerOverlay = document.getElementById('drawer-overlay');
+    const drawerClose = document.getElementById('drawer-close');
+    const menuBtn = document.getElementById('menu-btn');
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      drawerOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      drawerOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    menuBtn.addEventListener('click', openDrawer);
+    drawerClose.addEventListener('click', closeDrawer);
+    drawerOverlay.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+  </script>
+
+</body>
+</html>

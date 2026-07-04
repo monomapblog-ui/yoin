@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMWGEPBMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMWGEPBMND');
+  </script>
+  <title>プライバシーポリシー | GRASTA EXPO</title>
+  <meta name="description" content="グラステEXPO（合同会社グラステ）のプライバシーポリシー。個人情報の取扱いについて定めています。" />
+  <meta name="robots" content="noindex" />
+
+  <link rel="canonical" href="https://gravurestation.jp/privacy.html" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Noto+Sans+JP:wght@300;400;700&family=Shippori+Mincho:wght@500;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet" />
+  </noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #f8f6f2;
+      --bg2:     #f0ede7;
+      --ink:     #1a1612;
+      --ink2:    #5a5450;
+      --ink3:    #9a9390;
+      --pink:    #B51748;
+      --pink2:   #D4476B;
+      --purple:  #8b52d6;
+      --border:  rgba(26,22,18,.1);
+      --display: 'Cinzel', serif;
+      --mincho:  'Shippori Mincho', serif;
+      --sans:    'Noto Sans JP', sans-serif;
+      --mono:    'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.8;
+      letter-spacing: .04em;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(248,246,242,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      height: 64px;
+      padding: 0 40px;
+    }
+
+    .logo { display: block; }
+    .logo-img { height: 36px; width: auto; display: block; }
+    .header-right { display: flex; justify-content: flex-end; }
+
+    .menu-btn {
+      font-family: var(--mono);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      color: var(--ink);
+      background: transparent;
+      border: 1.5px solid var(--ink);
+      padding: .5rem 1.6rem;
+      cursor: pointer;
+      transition: background .25s, color .25s;
+    }
+
+    .menu-btn:hover { background: var(--ink); color: var(--bg); }
+
+    /* ─── BREADCRUMB ─── */
+    .breadcrumb { padding: 100px 8% 0; max-width: 900px; margin: 0 auto; }
+
+    .breadcrumb-inner {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink3);
+    }
+
+    .breadcrumb a { color: var(--ink3); text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb-sep { opacity: .4; }
+    .breadcrumb-current { color: var(--ink2); }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero { padding: 60px 8% 0; max-width: 900px; margin: 0 auto; }
+
+    .sec-label { display: flex; align-items: center; gap: 10px; margin-bottom: 2rem; }
+    .sec-label-line { width: 36px; height: 1.5px; background: linear-gradient(90deg, var(--pink), var(--purple)); }
+    .sec-label-text {
+      font-family: var(--display);
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink);
+    }
+
+    .page-hero-h1 {
+      font-family: var(--mincho);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: .1em;
+      margin-bottom: .8rem;
+    }
+
+    .page-hero-meta {
+      font-family: var(--display);
+      font-size: .6rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      color: var(--ink3);
+      text-transform: uppercase;
+    }
+
+    /* ─── POLICY CONTENT ─── */
+    .policy-content {
+      padding: 60px 8% 120px;
+    }
+
+    .policy-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .policy-intro {
+      font-size: .9rem;
+      color: var(--ink2);
+      line-height: 2.1;
+      letter-spacing: .05em;
+      padding: 2.4rem 3rem;
+      background: var(--bg2);
+      border-left: 3px solid var(--pink);
+      margin-bottom: 3.6rem;
+    }
+
+    .policy-section {
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .policy-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .policy-section-num {
+      font-family: var(--display);
+      font-size: .56rem;
+      font-weight: 400;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: .6rem;
+    }
+
+    .policy-section-title {
+      font-family: var(--mincho);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      margin-bottom: 1.2rem;
+    }
+
+    .policy-section p {
+      font-size: .88rem;
+      color: var(--ink2);
+      line-height: 2.1;
+      letter-spacing: .05em;
+      margin-bottom: 1rem;
+    }
+
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    .policy-list {
+      list-style: none;
+      margin: .8rem 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .policy-list li {
+      font-size: .88rem;
+      color: var(--ink2);
+      line-height: 1.9;
+      letter-spacing: .04em;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+
+    .policy-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--pink);
+      font-size: .8rem;
+    }
+
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: .86rem;
+    }
+
+    .policy-table th,
+    .policy-table td {
+      padding: .9rem 1.2rem;
+      border: 1px solid var(--border);
+      line-height: 1.8;
+      letter-spacing: .04em;
+      vertical-align: top;
+    }
+
+    .policy-table th {
+      background: var(--bg2);
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      width: 30%;
+    }
+
+    .policy-table td { color: var(--ink2); }
+
+    .contact-box {
+      background: var(--ink);
+      padding: 2.8rem 3.2rem;
+      margin-top: 3.6rem;
+    }
+
+    .contact-box-label {
+      font-family: var(--display);
+      font-size: .58rem;
+      font-weight: 400;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--pink2);
+      margin-bottom: 1rem;
+    }
+
+    .contact-box-title {
+      font-family: var(--mincho);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      color: #fff;
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-box table {
+      font-size: .84rem;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .contact-box td {
+      padding: .4rem 0;
+      color: rgba(248,246,242,.7);
+      letter-spacing: .04em;
+      line-height: 1.8;
+      vertical-align: top;
+    }
+
+    .contact-box td:first-child {
+      font-family: var(--display);
+      font-size: .58rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,.4);
+      width: 120px;
+      padding-top: .5rem;
+    }
+
+    .back-row { margin-top: 3rem; }
+
+    .back-link {
+      font-family: var(--display);
+      font-size: .62rem;
+      font-weight: 400;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      transition: color .2s;
+    }
+
+    .back-link:hover { color: var(--pink); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(248,246,242,.08);
+      padding: 60px 8% 32px;
+      color: rgba(248,246,242,.7);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo {
+      font-family: var(--mono);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      color: var(--bg);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-logo span { color: var(--pink2); }
+    .footer-brand-desc { font-size: .8rem; line-height: 1.9; }
+
+    .footer-col h4 {
+      font-family: var(--mono);
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(248,246,242,.4);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: .65rem; }
+
+    .footer-col a {
+      font-size: .8rem;
+      color: rgba(248,246,242,.6);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover { color: var(--pink2); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(248,246,242,.08);
+      padding-top: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy { font-size: .72rem; color: rgba(248,246,242,.35); }
+    .footer-sns { display: flex; gap: .8rem; }
+
+    .sns-icon {
+      width: 36px; height: 36px;
+      border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      text-decoration: none;
+    }
+
+    .sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    /* ─── DRAWER ─── */
+    .drawer-overlay {
+      position: fixed; inset: 0;
+      background: rgba(26,22,18,.6);
+      z-index: 1100; opacity: 0; pointer-events: none;
+      transition: opacity .4s cubic-bezier(.16,1,.3,1);
+      backdrop-filter: blur(4px);
+    }
+
+    .drawer-overlay.open { opacity: 1; pointer-events: all; }
+
+    .drawer {
+      position: fixed; top: 0; right: 0;
+      width: min(420px, 100vw); height: 100%;
+      background: var(--ink); z-index: 1200;
+      transform: translateX(100%);
+      transition: transform .5s cubic-bezier(.16,1,.3,1);
+      display: flex; flex-direction: column; overflow-y: auto;
+    }
+
+    .drawer.open { transform: translateX(0); }
+
+    .drawer-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.6rem 2.4rem;
+      border-bottom: 1px solid rgba(248,246,242,.08);
+      flex-shrink: 0;
+    }
+
+    .drawer-logo-img { height: 32px; filter: brightness(0) invert(1); }
+
+    .drawer-close {
+      width: 40px; height: 40px; background: transparent;
+      border: 1.5px solid rgba(248,246,242,.2); color: var(--bg);
+      font-size: 1.1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .2s, background .2s;
+    }
+
+    .drawer-close:hover { border-color: var(--pink2); background: rgba(181,23,72,.15); }
+
+    .drawer-nav { padding: 2.4rem; flex: 1; }
+
+    .drawer-nav-label {
+      font-family: var(--mono); font-size: .58rem; font-weight: 700;
+      letter-spacing: .28em; color: rgba(248,246,242,.3);
+      text-transform: uppercase; margin-bottom: 1.6rem;
+    }
+
+    .drawer-nav-list { list-style: none; }
+    .drawer-nav-item { border-bottom: 1px solid rgba(248,246,242,.06); }
+
+    .drawer-nav-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.1rem 0; text-decoration: none;
+      color: rgba(248,246,242,.85);
+      font-family: var(--mincho); font-size: 1.1rem; font-weight: 500;
+      letter-spacing: .1em;
+      transition: color .2s, padding-left .2s;
+    }
+
+    .drawer-nav-link:hover { color: var(--pink2); padding-left: .5rem; }
+
+    .drawer-nav-link .nav-en {
+      font-family: var(--mono); font-size: .62rem; font-weight: 700;
+      letter-spacing: .18em; color: rgba(248,246,242,.3); text-transform: uppercase;
+    }
+
+    .drawer-nav-link:hover .nav-en { color: var(--pink2); }
+
+    .drawer-footer {
+      padding: 2rem 2.4rem;
+      border-top: 1px solid rgba(248,246,242,.08);
+      flex-shrink: 0;
+    }
+
+    .drawer-footer-sns { display: flex; gap: .6rem; margin-bottom: 1.4rem; }
+
+    .drawer-sns-icon {
+      width: 38px; height: 38px;
+      border: 1px solid rgba(248,246,242,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .9rem; cursor: pointer;
+      transition: border-color .2s, background .2s;
+      text-decoration: none; color: rgba(248,246,242,.6);
+    }
+
+    .drawer-sns-icon:hover { border-color: var(--pink2); background: rgba(181,23,72,.12); }
+
+    .drawer-footer-copy {
+      font-size: .68rem; color: rgba(248,246,242,.25);
+      font-family: var(--mono); letter-spacing: .05em;
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 960px) {
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .policy-intro { padding: 1.8rem 2rem; }
+      .contact-box { padding: 2.2rem 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 0 20px; }
+      .policy-content { padding: 60px 6% 80px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .policy-table th { width: auto; display: block; border-bottom: none; }
+      .policy-table td { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- DRAWER OVERLAY -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+
+  <!-- MENU DRAWER -->
+  <aside class="drawer" id="drawer" aria-label="ナビゲーション">
+    <div class="drawer-header">
+      <span><img src="logo.jpg" alt="GRASTA" class="drawer-logo-img" width="113" height="100" /></span>
+      <button class="drawer-close" id="drawer-close" aria-label="閉じる">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <p class="drawer-nav-label">Navigation</p>
+      <ul class="drawer-nav-list">
+        <li class="drawer-nav-item"><a href="index.html" class="drawer-nav-link"><span>トップ</span><span class="nav-en">TOP</span></a></li>
+        <li class="drawer-nav-item"><a href="index.html#about" class="drawer-nav-link"><span>イベント概要</span><span class="nav-en">ABOUT</span></a></li>
+        <li class="drawer-nav-item"><a href="index.html#lineup" class="drawer-nav-link"><span>参加出展者</span><span class="nav-en">LINEUP</span></a></li>
+        <li class="drawer-nav-item"><a href="ticket.html" class="drawer-nav-link"><span>チケット</span><span class="nav-en">TICKET</span></a></li>
+        <li class="drawer-nav-item"><a href="index.html#schedule" class="drawer-nav-link"><span>スケジュール</span><span class="nav-en">SCHEDULE</span></a></li>
+        <li class="drawer-nav-item"><a href="index.html#access" class="drawer-nav-link"><span>アクセス</span><span class="nav-en">ACCESS</span></a></li>
+        <li class="drawer-nav-item"><a href="safety.html" class="drawer-nav-link"><span>安心・安全</span><span class="nav-en">SAFETY</span></a></li>
+        <li class="drawer-nav-item"><a href="station.html" class="drawer-nav-link"><span>グラビアステーション</span><span class="nav-en">STATION</span></a></li>
+        <li class="drawer-nav-item"><a href="privacy.html" class="drawer-nav-link"><span>プライバシーポリシー</span><span class="nav-en">PRIVACY</span></a></li>
+      </ul>
+    </nav>
+    <div class="drawer-footer">
+      <div class="drawer-footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="drawer-sns-icon" title="Instagram">📷</a>
+        <a class="drawer-sns-icon" title="TikTok">🎵</a>
+      </div>
+      <p class="drawer-footer-copy">© 2026 合同会社グラステ / GRASTA LLC.</p>
+    </div>
+  </aside>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo"><img src="logo.jpg" alt="GRASTA" class="logo-img" width="113" height="100" /></a>
+      <div></div>
+      <div class="header-right">
+        <button class="menu-btn" id="menu-btn">MENU</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">HOME</a>
+      <span class="breadcrumb-sep">/</span>
+      <span class="breadcrumb-current">PRIVACY POLICY</span>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="sec-label">
+      <div class="sec-label-line"></div>
+      <span class="sec-label-text">PRIVACY POLICY</span>
+    </div>
+    <h1 class="page-hero-h1">プライバシーポリシー</h1>
+    <p class="page-hero-meta">制定日：2026年1月1日　最終更新：2026年5月25日</p>
+  </div>
+
+  <!-- POLICY CONTENT -->
+  <div class="policy-content">
+    <div class="policy-inner">
+
+      <p class="policy-intro">
+        合同会社グラステ（以下「当社」）は、グラステEXPO（GRASTA EXPO）の運営にあたり、来場者・チケット申込者・お問い合わせいただいた方の個人情報を適切に取り扱うことが社会的責務であると考えています。個人情報の保護に関する法律（個人情報保護法）をはじめとする関係法令を遵守し、以下のポリシーに従って個人情報を管理します。
+      </p>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 01</p>
+        <h2 class="policy-section-title">事業者情報</h2>
+        <table class="policy-table">
+          <tr><th>事業者名</th><td>合同会社グラステ</td></tr>
+          <tr><th>所在地</th><td>東京都新宿区</td></tr>
+          <tr><th>代表者</th><td>代表社員</td></tr>
+          <tr><th>お問い合わせ</th><td>info@gravurestation.jp</td></tr>
+        </table>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 02</p>
+        <h2 class="policy-section-title">取得する個人情報と利用目的</h2>
+        <p>当社は、以下の目的のために必要な範囲で個人情報を取得・利用します。</p>
+        <table class="policy-table" style="margin-top:1.2rem;">
+          <tr>
+            <th>取得する情報</th>
+            <th>利用目的</th>
+          </tr>
+          <tr>
+            <td>氏名・フリガナ・メールアドレス・購入枚数</td>
+            <td>チケット申込の受付・確認・入金案内・QRコードの発行・入場確認</td>
+          </tr>
+          <tr>
+            <td>氏名・メールアドレス・お問い合わせ内容</td>
+            <td>お問い合わせへの回答・サポート対応</td>
+          </tr>
+          <tr>
+            <td>アクセスログ・Cookie情報</td>
+            <td>サイトの利用状況分析・改善・不正アクセスの検知</td>
+          </tr>
+        </table>
+        <p style="margin-top:1rem;">上記の利用目的の範囲を超えて個人情報を利用する場合は、あらかじめご本人の同意を取得します。</p>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 03</p>
+        <h2 class="policy-section-title">個人情報の第三者提供</h2>
+        <p>当社は、以下のいずれかに該当する場合を除き、ご本人の同意なく第三者に個人情報を提供しません。</p>
+        <ul class="policy-list">
+          <li>法令に基づく場合</li>
+          <li>人の生命・身体・財産の保護のために必要であり、ご本人の同意を得ることが困難な場合</li>
+          <li>公衆衛生の向上または児童の健全な育成推進のために特に必要な場合</li>
+          <li>国・地方公共団体等が法令所定の事務を遂行することに協力する必要がある場合</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 04</p>
+        <h2 class="policy-section-title">業務委託先への提供</h2>
+        <p>当社は、利用目的の達成に必要な範囲で、個人情報の取扱いを外部事業者に委託することがあります。その際は委託先に対し適切な監督を行います。</p>
+        <ul class="policy-list">
+          <li>メール配信サービス（チケット確認メール・QRコードの送付）</li>
+          <li>フォーム送信サービス（Web3Forms：申込データの転送）</li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 05</p>
+        <h2 class="policy-section-title">Cookieおよびアクセス解析</h2>
+        <p>本サイトでは、利便性の向上および利用状況の分析を目的として Cookie を使用する場合があります。Cookie はブラウザの設定から無効にすることが可能ですが、一部機能が利用できなくなる場合があります。</p>
+        <p>また、サービス改善を目的としたアクセス解析ツールを導入する場合があります。取得するデータは統計情報として処理され、個人を特定するものではありません。</p>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 06</p>
+        <h2 class="policy-section-title">個人情報の管理・保管期間</h2>
+        <p>当社は、個人情報への不正アクセス・紛失・破損・改ざん・漏洩を防止するため、適切な安全管理措置を講じます。</p>
+        <p>取得した個人情報は、利用目的を達成するために必要な期間保管し、不要となった時点で速やかに削除または廃棄します。なお、チケット申込に関する情報は、イベント終了後 1 年間保管した後、適切に削除します。</p>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 07</p>
+        <h2 class="policy-section-title">個人情報の開示・訂正・削除・利用停止</h2>
+        <p>ご本人から個人情報の開示・訂正・削除・利用停止の請求があった場合は、ご本人確認のうえ、法令の規定に従い合理的な期間内に対応します。</p>
+        <p>ご請求は下記お問い合わせ窓口までメールにてご連絡ください。</p>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 08</p>
+        <h2 class="policy-section-title">未成年者の個人情報</h2>
+        <p>グラステEXPOは18歳以上の方を対象としたイベントです。18歳未満の方からの個人情報の取得は予定しておらず、万が一取得が確認された場合は速やかに削除します。</p>
+      </div>
+
+      <div class="policy-section">
+        <p class="policy-section-num">Article 09</p>
+        <h2 class="policy-section-title">プライバシーポリシーの改定</h2>
+        <p>当社は、法令の変更や事業内容の変化等に応じて、本ポリシーを改定することがあります。改定した場合は本ページ上に掲載し、掲載をもって効力が発生するものとします。</p>
+      </div>
+
+      <!-- Contact Box -->
+      <div class="contact-box">
+        <p class="contact-box-label">Contact</p>
+        <p class="contact-box-title">個人情報に関するお問い合わせ窓口</p>
+        <table>
+          <tr>
+            <td>事業者</td>
+            <td>合同会社グラステ</td>
+          </tr>
+          <tr>
+            <td>担当</td>
+            <td>個人情報保護管理者</td>
+          </tr>
+          <tr>
+            <td>メール</td>
+            <td>info@gravurestation.jp</td>
+          </tr>
+          <tr>
+            <td>受付時間</td>
+            <td>平日 10:00 – 18:00（土日祝・年末年始を除く）</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="back-row">
+        <a href="index.html" class="back-link">← トップページに戻る</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo">GRASTA<span>.</span></a>
+        <p class="footer-brand-desc">ネットで見かけるあの子にリアルで会える、新感覚の展示会型イベント。<br>合同会社グラステが贈る新しいエンタテイメント体験。</p>
+      </div>
+      <div class="footer-col">
+        <h4>EVENT</h4>
+        <ul>
+          <li><a href="index.html#about">イベント概要</a></li>
+          <li><a href="index.html#lineup">出演者</a></li>
+          <li><a href="index.html#schedule">スケジュール</a></li>
+          <li><a href="index.html#access">アクセス</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>TICKET</h4>
+        <ul>
+          <li><a href="ticket.html">チケット購入</a></li>
+          <li><a href="ticket.html">料金・特典</a></li>
+          <li><a href="terms.html">注意事項</a></li>
+          <li><a href="terms.html#refund">払い戻しポリシー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>COMPANY</h4>
+        <ul>
+          <li><a href="company.html">合同会社グラステ</a></li>
+          <li><span style="font-size:.85rem;color:rgba(248,246,242,.3);">グラビアステーション</span></li>
+          <li><a href="bar.html">グラステBAR</a></li>
+          <li><a href="index.html">お問い合わせ</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 合同会社グラステ / GRASTA LLC. All Rights Reserved.</p>
+      <div class="footer-sns">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="X (Twitter)">𝕏</a>
+        <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener" class="sns-icon" title="Instagram">📷</a>
+        <a class="sns-icon" title="TikTok">🎵</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const drawer  = document.getElementById('drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const open  = () => { drawer.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow = 'hidden'; };
+    const close = () => { drawer.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow = ''; };
+    document.getElementById('menu-btn').addEventListener('click', open);
+    document.getElementById('drawer-close').addEventListener('click', close);
+    overlay.addEventListener('click', close);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  </script>
+
+</body>
+</html>

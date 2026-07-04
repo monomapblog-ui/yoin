@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NMWGEPBMND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NMWGEPBMND');
+  </script>
+  <title>グラビアステーション | グラビア・推し活の総合情報メディア</title>
+  <meta name="description" content="グラビアステーション — グラビアアイドル・裏垢女子・コスプレイヤーのイベント情報を発信する推し活総合メディア。" />
+  <link rel="canonical" href="https://gravurestation.jp/station.html" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo.png" />
+
+  <!-- OGP -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="グラビアステーション" />
+  <meta property="og:title"       content="グラビアステーション | グラビア・推し活の総合情報メディア" />
+  <meta property="og:description" content="グラビアアイドル・裏垢女子・コスプレイヤーのイベント情報を発信する推し活総合メディア。" />
+  <meta property="og:url"         content="https://gravurestation.jp/station.html" />
+  <meta property="og:image"       content="https://gravurestation.jp/ogp.jpg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { DEFAULT: '#b32b47', dark: '#8c1f35', light: '#c94060' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Noto Sans JP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * { font-family: 'Noto Sans JP', sans-serif; }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .tab-btn.active {
+      border-bottom: 2px solid #b32b47;
+      color: #b32b47;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 text-sm">
+
+  <!-- ── お知らせバー ── -->
+  <div class="bg-[#b32b47] text-white text-xs py-1.5 px-4 text-center">
+    <span>🎉 グラステEXPO 2026 開催決定！ 詳細は続報をお待ちください。</span>
+  </div>
+
+  <!-- ── HEADER ── -->
+  <header class="bg-white border-b border-gray-200 py-3 px-4">
+    <div class="max-w-6xl mx-auto flex items-center gap-4">
+
+      <!-- Logo -->
+      <a href="station.html" class="flex items-center gap-2.5 flex-shrink-0">
+        <img src="logo.jpg" alt="GRASTA" width="113" height="100" class="h-10 w-auto" />
+        <div>
+          <div class="text-base font-bold text-gray-900 leading-tight tracking-tight">グラビアステーション</div>
+          <div class="text-xs text-gray-400 tracking-widest leading-tight">Gravure Station</div>
+        </div>
+      </a>
+
+      <!-- Search -->
+      <div class="flex-1 max-w-xl mx-auto hidden sm:flex items-center border border-gray-300 rounded overflow-hidden shadow-sm">
+        <input type="text" placeholder="モデル名・イベント名・ジャンルで検索..."
+          class="flex-1 px-3 py-2 text-sm outline-none bg-white" />
+        <button class="bg-[#b32b47] hover:bg-[#8c1f35] transition px-4 py-2 text-white flex items-center gap-1 text-xs font-medium">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          検索
+        </button>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex-shrink-0 flex items-center gap-2">
+        <a href="https://x.com/grasta_official" target="_blank" rel="noopener"
+          class="hidden md:flex items-center gap-1.5 bg-black text-white text-xs font-bold py-2 px-3 rounded hover:opacity-85 transition">
+          <span class="text-sm leading-none">𝕏</span>
+          <span>フォロー</span>
+        </a>
+        <a href="mailto:info@gravurestation.jp"
+          class="bg-[#b32b47] hover:bg-[#8c1f35] text-white text-xs font-bold py-2 px-4 rounded transition whitespace-nowrap">
+          お問い合わせ
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile search -->
+    <div class="max-w-6xl mx-auto mt-2 flex sm:hidden items-center border border-gray-300 rounded overflow-hidden shadow-sm">
+      <input type="text" placeholder="検索..."
+        class="flex-1 px-3 py-2 text-sm outline-none bg-white" />
+      <button class="bg-[#b32b47] px-3 py-2 text-white">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── GLOBAL NAVIGATION ── -->
+  <nav class="bg-[#b32b47] text-white shadow-md">
+    <div class="max-w-6xl mx-auto flex overflow-x-auto">
+      <a href="station.html" class="px-4 py-3 text-xs font-medium whitespace-nowrap hover:bg-[#8c1f35] transition border-b-2 border-white">トップ</a>
+      <a href="#news"        class="px-4 py-3 text-xs font-medium whitespace-nowrap hover:bg-[#8c1f35] transition">新着情報</a>
+      <a href="#events"      class="px-4 py-3 text-xs font-medium whitespace-nowrap hover:bg-[#8c1f35] transition">イベント</a>
+      <a href="#"            class="px-4 py-3 text-xs font-medium whitespace-nowrap hover:bg-[#8c1f35] transition">活動者一覧</a>
+      <a href="#"            class="px-4 py-3 text-xs font-medium whitespace-nowrap hover:bg-[#8c1f35] transition">コラム</a>
+      <a href="sponsor.html" class="px-4 py-3 text-xs font-medium whitespace-nowrap hover:bg-[#8c1f35] transition">掲載・協賛</a>
+    </div>
+  </nav>
+
+  <!-- ── BREADCRUMB ── -->
+  <div class="bg-white border-b border-gray-200 py-1.5 px-4">
+    <div class="max-w-6xl mx-auto text-xs text-gray-400">
+      <a href="index.html" class="hover:text-[#b32b47] transition">HOME</a>
+      <span class="mx-1">›</span>
+      <span class="text-gray-600">グラビアステーション</span>
+    </div>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <main class="max-w-6xl mx-auto px-4 py-5">
+    <div class="flex gap-5">
+
+      <!-- ── LEFT: カテゴリ (hidden on mobile) ── -->
+      <aside class="hidden lg:block w-44 flex-shrink-0">
+
+        <div class="bg-white border border-gray-200 rounded shadow-sm mb-4">
+          <div class="bg-[#b32b47] text-white text-xs font-bold px-3 py-2 rounded-t">カテゴリから探す</div>
+          <ul class="divide-y divide-gray-100">
+            <li><a href="#" class="flex items-center justify-between px-3 py-2.5 text-xs text-gray-700 hover:text-[#b32b47] hover:bg-red-50 transition">
+              <span>📸 グラビアアイドル</span>
+            </a></li>
+            <li><a href="#" class="flex items-center justify-between px-3 py-2.5 text-xs text-gray-700 hover:text-[#b32b47] hover:bg-red-50 transition">
+              <span>🔞 裏垢女子</span>
+            </a></li>
+            <li><a href="#" class="flex items-center justify-between px-3 py-2.5 text-xs text-gray-700 hover:text-[#b32b47] hover:bg-red-50 transition">
+              <span>🎭 コスプレイヤー</span>
+            </a></li>
+            <li><a href="#events" class="flex items-center justify-between px-3 py-2.5 text-xs text-gray-700 hover:text-[#b32b47] hover:bg-red-50 transition">
+              <span>🎪 イベント情報</span>
+            </a></li>
+            <li><a href="#" class="flex items-center justify-between px-3 py-2.5 text-xs text-gray-700 hover:text-[#b32b47] hover:bg-red-50 transition">
+              <span>✏️ コラム</span>
+            </a></li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded shadow-sm mb-4">
+          <div class="bg-gray-700 text-white text-xs font-bold px-3 py-2 rounded-t">公式SNS</div>
+          <div class="p-3 flex flex-col gap-2">
+            <a href="https://x.com/grasta_official" target="_blank" rel="noopener"
+              class="flex items-center gap-2 bg-black text-white text-xs font-bold py-2 px-2.5 rounded hover:opacity-85 transition">
+              <span class="text-sm leading-none">𝕏</span>
+              <span>@grasta_official</span>
+            </a>
+            <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener"
+              class="flex items-center gap-2 text-white text-xs font-bold py-2 px-2.5 rounded hover:opacity-85 transition"
+              style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+              <span class="text-sm leading-none">📷</span>
+              <span>Instagram</span>
+            </a>
+            <a href="https://note.com/gravurestation" target="_blank" rel="noopener"
+              class="flex items-center gap-2 text-white text-xs font-bold py-2 px-2.5 rounded hover:opacity-85 transition"
+              style="background:#41c9b4">
+              <span class="text-sm font-black italic leading-none">n</span>
+              <span>note</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded shadow-sm">
+          <div class="bg-gray-700 text-white text-xs font-bold px-3 py-2 rounded-t">掲載・協賛</div>
+          <div class="p-3">
+            <p class="text-xs text-gray-500 leading-relaxed mb-2">活動者の掲載・イベント告知・スポンサー募集中</p>
+            <a href="sponsor.html"
+              class="block text-center bg-[#b32b47] hover:bg-[#8c1f35] text-white text-xs font-bold py-2 px-3 rounded transition">
+              詳細を見る →
+            </a>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ── CENTER: 新着情報 ── -->
+      <div class="flex-1 min-w-0" id="news">
+
+        <!-- タブ -->
+        <div class="bg-white border border-gray-200 rounded-t shadow-sm">
+          <div class="flex border-b border-gray-200 overflow-x-auto">
+            <button onclick="filterNews('all')" data-tab="all"
+              class="tab-btn active px-4 py-3 text-xs whitespace-nowrap text-gray-600 hover:text-[#b32b47] transition">
+              すべて
+            </button>
+            <button onclick="filterNews('news')" data-tab="news"
+              class="tab-btn px-4 py-3 text-xs whitespace-nowrap text-gray-600 hover:text-[#b32b47] transition">
+              ニュース
+            </button>
+            <button onclick="filterNews('event')" data-tab="event"
+              class="tab-btn px-4 py-3 text-xs whitespace-nowrap text-gray-600 hover:text-[#b32b47] transition">
+              イベント
+            </button>
+            <button onclick="filterNews('column')" data-tab="column"
+              class="tab-btn px-4 py-3 text-xs whitespace-nowrap text-gray-600 hover:text-[#b32b47] transition">
+              コラム
+            </button>
+          </div>
+
+          <!-- 新着リスト -->
+          <div id="news-list" class="divide-y divide-gray-100">
+            <div class="p-8 text-center text-gray-400 text-xs">
+              <svg class="animate-spin w-5 h-5 mx-auto mb-2 text-[#b32b47]" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+              </svg>
+              読み込み中...
+            </div>
+          </div>
+
+          <div class="p-3 text-right border-t border-gray-100">
+            <a href="#" class="text-xs text-[#b32b47] hover:underline font-medium">› もっと見る</a>
+          </div>
+        </div>
+
+        <!-- ── EVENT SECTION ── -->
+        <div class="mt-6" id="events">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-sm font-bold border-l-4 border-[#b32b47] pl-3 text-gray-800">イベント情報</h2>
+            <a href="index.html" class="text-xs text-[#b32b47] hover:underline font-medium">› もっと見る</a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3">
+
+            <a href="index.html" class="bg-white border border-gray-200 rounded shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition group">
+              <div class="h-28 bg-gradient-to-br from-[#2a0d18] to-[#b32b47] flex flex-col items-center justify-center text-white p-3 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-5" style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:8px 8px;"></div>
+                <p class="text-xs opacity-80 mb-1 relative">2026年11月某日</p>
+                <p class="font-bold text-sm leading-snug relative">グラステEXPO 2026</p>
+                <p class="text-xs opacity-70 mt-1 relative">グラビア作品中心の同人即売会</p>
+              </div>
+              <div class="p-3">
+                <div class="flex items-center gap-2 mb-1.5">
+                  <span class="bg-pink-100 text-[#b32b47] text-xs px-1.5 py-0.5 rounded font-medium">即売会</span>
+                  <span class="text-xs text-gray-400">都内某所</span>
+                </div>
+                <p class="text-xs text-gray-400 group-hover:text-[#b32b47] transition">チケット詳細を見る →</p>
+              </div>
+            </a>
+
+            <div class="bg-white border border-dashed border-gray-300 rounded shadow-sm overflow-hidden opacity-60">
+              <div class="h-28 bg-gray-100 flex items-center justify-center">
+                <span class="text-gray-400 text-xs">近日公開</span>
+              </div>
+              <div class="p-3"><p class="text-xs text-gray-400">イベント情報 準備中</p></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── RIGHT: サイドバー ── -->
+      <aside class="hidden xl:block w-56 flex-shrink-0">
+
+        <!-- EXPOカード -->
+        <div class="rounded shadow-sm overflow-hidden border border-gray-200 mb-4">
+          <div class="bg-gradient-to-br from-gray-900 via-[#2a0d18] to-[#b32b47] p-5 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-[.05]"
+              style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:10px 10px;">
+            </div>
+            <div class="relative z-10">
+              <p class="text-xs text-pink-200 tracking-wide mb-2">女子が好きな全人類、集合！</p>
+              <h3 class="text-base font-bold leading-snug mb-3">グラステEXPO<br>2026</h3>
+              <div class="flex flex-wrap gap-1">
+                <span class="bg-white/20 text-white text-xs px-1.5 py-0.5 rounded-sm">グラビア</span>
+                <span class="bg-white/20 text-white text-xs px-1.5 py-0.5 rounded-sm">裏垢女子</span>
+                <span class="bg-white/20 text-white text-xs px-1.5 py-0.5 rounded-sm">コスプレ</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-3">
+            <p class="text-xs text-gray-500 mb-1">📅 2026年11月某日</p>
+            <p class="text-xs text-gray-500 mb-3">📍 都内某所</p>
+            <a href="index.html"
+              class="block w-full bg-[#b32b47] hover:bg-[#8c1f35] text-white text-center text-xs font-bold py-2 rounded transition">
+              詳細を見る →
+            </a>
+          </div>
+        </div>
+
+        <!-- noteカード -->
+        <div class="bg-white border border-gray-200 rounded shadow-sm p-3">
+          <h3 class="text-xs font-bold border-l-4 border-[#41c9b4] pl-2 mb-2">グラステ note</h3>
+          <p class="text-xs text-gray-500 leading-relaxed mb-2">グラビア文化・推し活・イベントの裏側を発信中</p>
+          <a href="https://note.com/gravurestation" target="_blank" rel="noopener"
+            class="flex items-center gap-2 text-white text-xs font-bold py-2 px-3 rounded hover:opacity-85 transition"
+            style="background:#41c9b4">
+            <span class="font-black italic">n</span>
+            <span>noteを読む →</span>
+          </a>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="bg-gray-900 text-white mt-10 py-10 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+
+        <div>
+          <div class="flex items-center gap-3 mb-3">
+            <img src="logo.jpg" alt="GRASTA" width="113" height="100" class="h-9 w-auto" />
+            <div>
+              <p class="font-bold text-sm leading-tight">グラビアステーション</p>
+              <p class="text-xs text-gray-400 tracking-widest">Gravure Station</p>
+            </div>
+          </div>
+          <p class="text-xs text-gray-400 leading-relaxed">グラビアアイドル・裏垢女子・コスプレイヤーのイベント情報を発信する推し活総合メディア。</p>
+        </div>
+
+        <div class="flex gap-10">
+          <div>
+            <p class="font-medium text-xs text-white mb-3">カテゴリ</p>
+            <ul class="space-y-2 text-xs text-gray-400">
+              <li><a href="#" class="hover:text-white transition">グラビアアイドル</a></li>
+              <li><a href="#" class="hover:text-white transition">裏垢女子</a></li>
+              <li><a href="#" class="hover:text-white transition">コスプレイヤー</a></li>
+              <li><a href="#" class="hover:text-white transition">コラム</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-medium text-xs text-white mb-3">サービス</p>
+            <ul class="space-y-2 text-xs text-gray-400">
+              <li><a href="index.html" class="hover:text-white transition">グラステEXPO</a></li>
+              <li><a href="sponsor.html" class="hover:text-white transition">掲載・協賛</a></li>
+              <li><a href="company.html" class="hover:text-white transition">会社概要</a></li>
+              <li><a href="privacy.html" class="hover:text-white transition">プライバシーポリシー</a></li>
+              <li><a href="terms.html" class="hover:text-white transition">利用規約</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-medium text-xs text-white mb-3">SNS・メディア</p>
+          <div class="flex flex-col gap-2">
+            <a href="https://x.com/grasta_official" target="_blank" rel="noopener"
+              class="flex items-center gap-2 bg-black text-white text-xs font-bold py-2 px-3 rounded hover:opacity-85 transition w-fit">
+              <span>𝕏</span><span>@grasta_official</span>
+            </a>
+            <a href="https://www.instagram.com/grasta_official" target="_blank" rel="noopener"
+              class="flex items-center gap-2 text-white text-xs font-bold py-2 px-3 rounded hover:opacity-85 transition w-fit"
+              style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+              <span>📷</span><span>@grasta_official</span>
+            </a>
+            <a href="https://note.com/gravurestation" target="_blank" rel="noopener"
+              class="flex items-center gap-2 text-white text-xs font-bold py-2 px-3 rounded hover:opacity-85 transition w-fit"
+              style="background:#41c9b4">
+              <span class="font-black italic">n</span><span>note</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+        © 2026 合同会社グラステ / GRASTA LLC. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const MICROCMS_SERVICE = 'grasta';
+    const MICROCMS_KEY     = '74Ar0Btns8uucjSkBlvTbvPRkmly0oiAEqUq';
+    let allArticles = [];
+
+    const CATEGORY_LABELS = {
+      news:     { label: 'ニュース',  color: 'bg-blue-50 text-blue-600' },
+      event:    { label: 'イベント',  color: 'bg-pink-50 text-[#b32b47]' },
+      column:   { label: 'コラム',    color: 'bg-purple-50 text-purple-600' },
+    };
+
+    function formatDate(str) {
+      const d = new Date(str);
+      return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+    }
+
+    function isNew(publishedAt) {
+      return (Date.now() - new Date(publishedAt)) < 7 * 24 * 60 * 60 * 1000;
+    }
+
+    function renderNews(articles) {
+      const el = document.getElementById('news-list');
+      if (!articles.length) {
+        el.innerHTML = '<p class="p-8 text-center text-gray-400 text-xs">まだ記事がありません</p>';
+        return;
+      }
+      const cat = (a) => {
+        const key = a.category || '';
+        const info = CATEGORY_LABELS[key];
+        return info ? `<span class="text-xs px-1.5 py-0.5 rounded font-medium ${info.color}">${info.label}</span>` : '';
+      };
+      el.innerHTML = articles.map(a => `
+        <a href="article.html?id=${a.id}" class="flex gap-3 p-4 hover:bg-gray-50 transition group">
+          <div class="w-20 h-14 rounded flex-shrink-0 overflow-hidden bg-gray-200 flex items-center justify-center">
+            ${a.thumbnail
+              ? `<img src="${a.thumbnail.url}?w=160&h=112&fit=crop" alt="" class="w-full h-full object-cover" loading="lazy" />`
+              : '<span class="text-gray-400 text-xs text-center px-1">No Image</span>'}
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-1.5 mb-1 flex-wrap">
+              ${isNew(a.publishedAt) ? '<span class="bg-pink-500 text-white text-xs px-1.5 py-0.5 rounded font-bold leading-none">NEW</span>' : ''}
+              ${cat(a)}
+              <span class="text-xs text-gray-400">${formatDate(a.publishedAt)}</span>
+            </div>
+            <p class="text-sm font-medium leading-snug group-hover:text-[#b32b47] transition line-clamp-2">${a.title}</p>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    function filterNews(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.tab === tab);
+      });
+      const filtered = tab === 'all'
+        ? allArticles
+        : allArticles.filter(a => a.category === tab);
+      renderNews(filtered);
+    }
+
+    fetch(`https://${MICROCMS_SERVICE}.microcms.io/api/v1/news?limit=20&orders=-publishedAt`, {
+      headers: { 'X-MICROCMS-API-KEY': MICROCMS_KEY }
+    })
+    .then(r => r.json())
+    .then(d => {
+      allArticles = d.contents || [];
+      renderNews(allArticles);
+    })
+    .catch(() => {
+      document.getElementById('news-list').innerHTML =
+        '<p class="p-8 text-center text-gray-400 text-xs">記事の読み込みに失敗しました</p>';
+    });
+  </script>
+
+</body>
+</html>
