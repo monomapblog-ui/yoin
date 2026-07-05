@@ -24,7 +24,11 @@ export async function POST(req: NextRequest) {
   });
 
   if (process.env.RESEND_API_KEY) {
-    await sendVerificationEmail(email, token);
+    try {
+      await sendVerificationEmail(email, token);
+    } catch (err) {
+      console.error("Verification email send failed:", err);
+    }
   }
 
   return NextResponse.json({ ok: true });

@@ -25,7 +25,11 @@ export async function POST(req: NextRequest) {
   });
 
   if (process.env.RESEND_API_KEY) {
-    await sendPasswordResetEmail(email, token);
+    try {
+      await sendPasswordResetEmail(email, token);
+    } catch (err) {
+      console.error("Password reset email send failed:", err);
+    }
   }
 
   return NextResponse.json({ ok: true });
