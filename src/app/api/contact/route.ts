@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    await getResend().emails.send({
+    const { error } = await getResend().emails.send({
       from: `yoin お問い合わせ <${SUPPORT_EMAIL}>`,
       to: SUPPORT_EMAIL,
       replyTo: email,
@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
         </div>
       `,
     });
+    if (error) throw new Error(error.message);
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ error: "送信に失敗しました。しばらく後でお試しください。" }, { status: 500 });

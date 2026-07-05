@@ -71,8 +71,9 @@ export default async function ArticlePage({ params }: Props) {
     data: { viewCount: { increment: 1 } },
   });
 
-  const rawHtml = !canReadFull && article.previewPosition
-    ? article.body.slice(0, article.previewPosition)
+  const DEFAULT_PREVIEW_LENGTH = 400;
+  const rawHtml = !canReadFull
+    ? article.body.slice(0, article.previewPosition ?? DEFAULT_PREVIEW_LENGTH)
     : article.body;
   const previewHtml = sanitizeArticleHtml(rawHtml);
 

@@ -11,7 +11,7 @@ const BASE_URL = process.env.NEXTAUTH_URL ?? "http://localhost:3000";
 export async function sendVerificationEmail(email: string, token: string) {
   const url = `${BASE_URL}/auth/verify-email?token=${token}`;
 
-  await getResend().emails.send({
+  const { error } = await getResend().emails.send({
     from: FROM,
     to: email,
     subject: "【yoin】メールアドレスの確認",
@@ -33,12 +33,13 @@ export async function sendVerificationEmail(email: string, token: string) {
       </div>
     `,
   });
+  if (error) throw new Error(error.message);
 }
 
 export async function sendPasswordResetEmail(email: string, token: string) {
   const url = `${BASE_URL}/auth/reset-password?token=${token}`;
 
-  await getResend().emails.send({
+  const { error } = await getResend().emails.send({
     from: FROM,
     to: email,
     subject: "【yoin】パスワードのリセット",
@@ -59,4 +60,5 @@ export async function sendPasswordResetEmail(email: string, token: string) {
       </div>
     `,
   });
+  if (error) throw new Error(error.message);
 }
