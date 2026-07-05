@@ -1,19 +1,22 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
-import { Heart, Bookmark, Share2, Pencil } from "lucide-react";
+import { Heart, Bookmark, Share2, Pencil, Check } from "lucide-react";
 import Link from "next/link";
 
 interface ArticleActionsProps {
   articleId: string;
   likeCount: number;
   isOwner: boolean;
+  initialLiked?: boolean;
+  initialBookmarked?: boolean;
 }
 
-export function ArticleActions({ articleId, likeCount: initialLikeCount, isOwner }: ArticleActionsProps) {
-  const [liked, setLiked] = useState(false);
-  const [bookmarked, setBookmarked] = useState(false);
+export function ArticleActions({ articleId, likeCount: initialLikeCount, isOwner, initialLiked = false, initialBookmarked = false }: ArticleActionsProps) {
+  const [liked, setLiked] = useState(initialLiked);
+  const [bookmarked, setBookmarked] = useState(initialBookmarked);
   const [likeCount, setLikeCount] = useState(initialLikeCount);
+  const [copied, setCopied] = useState(false);
 
   async function toggleLike() {
     const res = await fetch(`/api/articles/${articleId}/like`, { method: liked ? "DELETE" : "POST" });
@@ -28,12 +31,13 @@ export function ArticleActions({ articleId, likeCount: initialLikeCount, isOwner
     if (res.ok) setBookmarked(!bookmarked);
   }
 
-  function share() {
+  async function share() {
     if (navigator.share) {
       navigator.share({ url: window.location.href }).catch(() => {});
     } else {
-      navigator.clipboard.writeText(window.location.href);
-      alert("URLをコピーしました");
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
   }
 
@@ -52,6 +56,7 @@ export function ArticleActions({ articleId, likeCount: initialLikeCount, isOwner
 
         <button
           onClick={toggleBookmark}
+          title={bookmarked ? "ブックマーク済み" : "ブックマーク"}
           className={`p-2 rounded-full transition-colors ${
             bookmarked ? "bg-amber-50 text-amber-500" : "bg-gray-100 text-gray-500 hover:bg-amber-50 hover:text-amber-500"
           }`}
@@ -61,9 +66,10 @@ export function ArticleActions({ articleId, likeCount: initialLikeCount, isOwner
 
         <button
           onClick={share}
-          className="p-2 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition-colors"
+          title={copied ? "コピーしました" : "URLをコピー"}
+          className={`p-2 rounded-full transition-colors ${copied ? "bg-green-50 text-green-500" : "bg-gray-100 text-gray-500 hover:bg-gray-200"}`}
         >
-          <Share2 className="w-4 h-4" />
+          {copied ? <Check className="w-4 h-4" /> : <Share2 className="w-4 h-4" />}
         </button>
       </div>
 

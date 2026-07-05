@@ -17,6 +17,8 @@ body {
   font-size: 1rem;
   line-height: 1.9;
   color: #111;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .article-body h2 {
@@ -33,14 +35,26 @@ body {
   margin: 2rem 0 0.75rem;
 }
 
+.article-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
 .article-body p {
   margin: 1.2rem 0;
 }
 
-.article-body ul,
+.article-body ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  list-style-type: disc;
+}
+
 .article-body ol {
   padding-left: 1.5rem;
   margin: 1rem 0;
+  list-style-type: decimal;
 }
 
 .article-body li {
@@ -48,29 +62,92 @@ body {
 }
 
 .article-body blockquote {
-  border-left: 4px solid #e5e7eb;
-  padding: 0.5rem 0 0.5rem 1.25rem;
+  border-left: 4px solid #d1fae5;
+  background: #f0fdf4;
+  padding: 0.75rem 1.25rem;
   margin: 1.5rem 0;
-  color: #6b7280;
-  font-style: italic;
+  color: #374151;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .article-body a {
-  color: #10b981;
+  color: #0d9488;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.article-body a:hover {
+  color: #0f766e;
 }
 
 .article-body img {
   max-width: 100%;
   border-radius: 0.75rem;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
+  display: block;
 }
 
 .article-body hr {
   border: none;
   border-top: 1px solid #e5e7eb;
   margin: 2.5rem 0;
+}
+
+.article-body strong,
+.article-body b {
+  font-weight: 700;
+  color: #111827;
+}
+
+.article-body em,
+.article-body i {
+  font-style: italic;
+}
+
+.article-body code {
+  font-family: "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 0.875em;
+  background: #f3f4f6;
+  color: #374151;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+
+.article-body pre {
+  background: #1f2937;
+  color: #f3f4f6;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.article-body pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.article-body th,
+.article-body td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.article-body th {
+  background: #f9fafb;
+  font-weight: 600;
 }
 
 /* 有料記事グラデーション */

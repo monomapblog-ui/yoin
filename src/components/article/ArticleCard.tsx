@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Avatar } from "@/components/ui/Avatar";
-import { formatDateShort, readingTime, stripHtml } from "@/lib/utils";
-import { Heart, Lock } from "lucide-react";
+import { formatDateShort } from "@/lib/utils";
+import { Heart, Lock, Eye } from "lucide-react";
 import type { ArticleWithAuthor } from "@/types";
 
 interface ArticleCardProps {
@@ -17,7 +17,6 @@ export function ArticleCard({ article }: ArticleCardProps) {
   return (
     <article className="bg-white rounded-xl border border-gray-100 overflow-hidden hover:shadow-md transition-shadow group">
       <Link href={`/articles/${article.id}`}>
-        {/* Thumbnail */}
         <div className="relative aspect-[1.91/1] bg-gray-100 overflow-hidden">
           {article.thumbnailUrl ? (
             <Image
@@ -39,9 +38,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
           )}
         </div>
 
-        {/* Body */}
         <div className="p-4">
-          {/* Tags */}
           {(areaTag || serviceTag) && (
             <div className="flex flex-wrap gap-1 mb-2">
               {areaTag && (
@@ -67,20 +64,25 @@ export function ArticleCard({ article }: ArticleCardProps) {
             </p>
           )}
 
-          {/* Footer */}
           <div className="flex items-center gap-2 mt-auto">
             <Avatar src={article.user.avatarUrl} name={article.user.displayName} size="sm" />
             <div className="flex-1 min-w-0">
               <p className="text-xs font-medium text-gray-700 truncate">{article.user.displayName}</p>
               <p className="text-xs text-gray-400">
                 {article.publishedAt ? formatDateShort(article.publishedAt) : ""}
-                {" · "}
-                約{readingTime(article.summary ?? "")}分
               </p>
             </div>
-            <div className="flex items-center gap-1 text-xs text-gray-400">
-              <Heart className="w-3.5 h-3.5" />
-              {article.likeCount}
+            <div className="flex items-center gap-2 text-xs text-gray-400">
+              {article.viewCount > 0 && (
+                <span className="flex items-center gap-0.5">
+                  <Eye className="w-3 h-3" />
+                  {article.viewCount.toLocaleString()}
+                </span>
+              )}
+              <span className="flex items-center gap-0.5">
+                <Heart className="w-3.5 h-3.5" />
+                {article.likeCount}
+              </span>
             </div>
           </div>
         </div>

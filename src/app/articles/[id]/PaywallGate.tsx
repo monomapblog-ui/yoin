@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
@@ -42,12 +42,8 @@ export function PaywallGate({ articleId, pricePt, isLoggedIn, userPoints }: Payw
   const canAfford = userPoints >= pricePt;
 
   return (
-    <div className="relative">
-      {/* フェードアウト */}
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-transparent to-white pointer-events-none" />
-
-      {/* ゲートUI */}
-      <div className="relative mt-8 bg-white rounded-2xl border border-gray-100 shadow-sm p-8 text-center">
+    <div>
+      <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8 text-center">
         <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-4">
           <Lock className="w-6 h-6 text-amber-500" />
         </div>

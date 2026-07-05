@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useEffect, useCallback } from "react";
 import { useSession } from "next-auth/react";
@@ -72,6 +72,11 @@ function CommentItem({
     setSubmitting(false);
   }
 
+  function handleDeleteReply(replyId: string) {
+    fetch(`/api/articles/${articleId}/comments/${replyId}`, { method: "DELETE" });
+    setLocalReplies((prev) => prev.filter((r) => r.id !== replyId));
+  }
+
   return (
     <div className={depth > 0 ? "ml-10 border-l-2 border-gray-100 pl-4" : ""}>
       <div className="flex gap-3 py-3">
@@ -105,7 +110,6 @@ function CommentItem({
             )}
           </div>
 
-          {/* 返信フォーム */}
           {replyOpen && (
             <div className="mt-3 flex gap-2">
               <textarea
@@ -129,7 +133,6 @@ function CommentItem({
         </div>
       </div>
 
-      {/* 返信リスト */}
       {localReplies.length > 0 && (
         <div className="ml-10">
           <button
@@ -145,7 +148,7 @@ function CommentItem({
               comment={reply}
               articleId={articleId}
               currentUserId={currentUserId}
-              onDelete={onDelete}
+              onDelete={handleDeleteReply}
               depth={1}
             />
           ))}
@@ -200,7 +203,6 @@ export function Comments({ articleId }: Props) {
         {!loading && <span className="text-sm font-normal text-gray-400">{comments.length}件</span>}
       </h2>
 
-      {/* 投稿フォーム */}
       {session ? (
         <form onSubmit={handleSubmit} className="flex gap-3 mb-6">
           <Avatar
@@ -234,7 +236,6 @@ export function Comments({ articleId }: Props) {
         </div>
       )}
 
-      {/* コメント一覧 */}
       {loading ? (
         <div className="space-y-4">
           {[1, 2].map((i) => (

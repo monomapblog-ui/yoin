@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+﻿export const dynamic = "force-dynamic";
 
 import { notFound } from "next/navigation";
 import { prisma } from "@/lib/prisma";
@@ -51,12 +51,18 @@ export default async function ArticlePage({ params }: Props) {
 
   const isOwner = session?.user?.id === article.userId;
   const isPaid = article.pricePt > 0;
+  const userId = session?.user?.id;
 
-  const hasPurchased = isPaid && session?.user?.id
-    ? !!(await prisma.purchase.findUnique({
-        where: { userId_articleId: { userId: session.user.id, articleId: id } },
-      }))
-    : false;
+  const [hasPurchased, userPointBalance, userHasLiked, userHasBookmarked] = userId
+    ? await Promise.all([
+        isPaid
+          ? prisma.purchase.findUnique({ where: { userId_articleId: { userId, articleId: id } } }).then(Boolean)
+          : Promise.resolve(false),
+        prisma.user.findUnique({ where: { id: userId }, select: { pointBalance: true } }).then((u) => u?.pointBalance ?? 0),
+        prisma.like.findUnique({ where: { userId_articleId: { userId, articleId: id } } }).then(Boolean),
+        prisma.bookmark.findUnique({ where: { userId_articleId: { userId, articleId: id } } }).then(Boolean),
+      ])
+    : [false, 0, false, false];
 
   const canReadFull = !isPaid || isOwner || hasPurchased;
 
@@ -148,12 +154,15 @@ export default async function ArticlePage({ params }: Props) {
 
         {/* 有料ゲート */}
         {!canReadFull && (
-          <PaywallGate
-            articleId={id}
-            pricePt={article.pricePt}
-            isLoggedIn={!!session}
-            userPoints={0}
-          />
+          <div className="-mt-24 relative">
+            <div className="h-24 bg-gradient-to-b from-transparent to-white pointer-events-none" />
+            <PaywallGate
+              articleId={id}
+              pricePt={article.pricePt}
+              isLoggedIn={!!session}
+              userPoints={userPointBalance}
+            />
+          </div>
         )}
       </div>
 
@@ -163,6 +172,8 @@ export default async function ArticlePage({ params }: Props) {
           articleId={id}
           likeCount={article._count.likes}
           isOwner={isOwner}
+          initialLiked={userHasLiked}
+          initialBookmarked={userHasBookmarked}
         />
       )}
 
