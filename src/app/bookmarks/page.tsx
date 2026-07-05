@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
+import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { ArticleCard } from "@/components/article/ArticleCard";
 import { Bookmark } from "lucide-react";
@@ -46,9 +47,9 @@ export default async function BookmarksPage() {
         <div className="text-center py-20 text-gray-400">
           <p className="text-4xl mb-4">🔖</p>
           <p>ブックマークした記事がありません</p>
-          <a href="/" className="mt-4 inline-block text-teal-600 hover:underline text-sm">
+          <Link href="/" className="mt-4 inline-block text-teal-600 hover:underline text-sm">
             記事を探す →
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

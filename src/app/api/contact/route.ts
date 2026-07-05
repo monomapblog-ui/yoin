@@ -1,7 +1,11 @@
 ﻿import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+function getResend() {
+  if (!resend) resend = new Resend(process.env.RESEND_API_KEY);
+  return resend;
+}
 const SUPPORT_EMAIL = process.env.SUPPORT_EMAIL ?? "support@yoin.jp";
 
 export async function POST(req: NextRequest) {
@@ -16,7 +20,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    await resend.emails.send({
+    await getResend().emails.send({
       from: `yoin お問い合わせ <${SUPPORT_EMAIL}>`,
       to: SUPPORT_EMAIL,
       replyTo: email,

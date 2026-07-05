@@ -1,5 +1,6 @@
 export const dynamic = "force-dynamic";
 
+import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { Users, FileText, ShoppingBag, Banknote, TrendingUp } from "lucide-react";
 import type { Metadata } from "next";
@@ -47,7 +48,7 @@ export default async function AdminPage() {
           <Banknote className="w-6 h-6 text-red-500 flex-shrink-0" />
           <div>
             <p className="font-bold text-red-700">{pendingWithdrawals}件の出金申請が審査待ちです</p>
-            <a href="/admin/withdrawals" className="text-sm text-red-600 hover:underline">審査する →</a>
+            <Link href="/admin/withdrawals" className="text-sm text-red-600 hover:underline">審査する →</Link>
           </div>
         </div>
       )}

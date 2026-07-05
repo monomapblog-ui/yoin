@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
 import { Avatar } from "@/components/ui/Avatar";
@@ -98,12 +99,12 @@ export default async function ProfilePage({ params }: Props) {
               />
             )}
             {isOwn && (
-              <a
+              <Link
                 href="/settings"
                 className="text-sm text-gray-500 border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors"
               >
                 プロフィール編集
-              </a>
+              </Link>
             )}
           </div>
 
@@ -138,9 +139,9 @@ export default async function ProfilePage({ params }: Props) {
           <p className="text-4xl mb-4">📝</p>
           <p>まだ記事がありません</p>
           {isOwn && (
-            <a href="/write" className="mt-4 inline-block text-teal-600 hover:underline text-sm">
+            <Link href="/write" className="mt-4 inline-block text-teal-600 hover:underline text-sm">
               最初の記事を書く →
-            </a>
+            </Link>
           )}
         </div>
       ) : (

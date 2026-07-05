@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { SessionProvider } from "next-auth/react";
 
@@ -32,10 +33,10 @@ export default function RootLayout({
             <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">
               <p className="font-bold text-gray-700">yoin</p>
               <nav className="flex flex-wrap gap-4 justify-center">
-                <a href="/terms" className="hover:text-gray-600">利用規約</a>
-                <a href="/privacy" className="hover:text-gray-600">プライバシーポリシー</a>
-                <a href="/tokushoho" className="hover:text-gray-600">特定商取引法</a>
-                <a href="/contact" className="hover:text-gray-600">お問い合わせ</a>
+                <Link href="/terms" className="hover:text-gray-600">利用規約</Link>
+                <Link href="/privacy" className="hover:text-gray-600">プライバシーポリシー</Link>
+                <Link href="/tokushoho" className="hover:text-gray-600">特定商取引法</Link>
+                <Link href="/contact" className="hover:text-gray-600">お問い合わせ</Link>
               </nav>
               <p>© 2026 yoin</p>
             </div>
