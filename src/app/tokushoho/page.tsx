@@ -11,7 +11,7 @@ export default function TokushohoPage() {
       <div className="bg-white rounded-2xl border border-gray-100 overflow-hidden">
         <table className="w-full text-sm">
           <tbody className="divide-y divide-gray-100">
-            <Row label="販売業者" value="yoin運営事務局" />
+            <Row label="販売業者" value="合同会社グラステ" />
             <Row label="運営責任者" value="（準備中）" />
             <Row label="所在地" value="お問い合わせいただいた場合、遅滞なく開示いたします" />
             <Row label="電話番号" value="お問い合わせいただいた場合、遅滞なく開示いたします" />
