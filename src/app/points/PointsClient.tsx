@@ -1,18 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Coins, CreditCard, Clock, CheckCircle, XCircle, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { POINT_PACKS as PACKS } from "@/lib/points";
 import type { PointsTransaction } from "@prisma/client";
 
-const POINT_PACKS = [
-  { id: "p500", points: 500, price: 550, bonus: 0, label: "500pt", popular: false },
-  { id: "p1000", points: 1000, price: 1100, bonus: 50, label: "1,050pt", popular: false },
-  { id: "p3000", points: 3000, price: 3300, bonus: 300, label: "3,300pt", popular: true },
-  { id: "p5000", points: 5000, price: 5500, bonus: 750, label: "5,750pt", popular: false },
-  { id: "p10000", points: 10000, price: 11000, bonus: 2000, label: "12,000pt", popular: false },
-];
+const POINT_PACKS = Object.entries(PACKS).map(([id, pack]) => ({ id, ...pack }));
 
 interface Props {
   currentBalance: number;
@@ -20,30 +15,29 @@ interface Props {
 }
 
 export function PointsClient({ currentBalance, transactions }: Props) {
-  const router = useRouter();
+  const searchParams = useSearchParams();
   const [selected, setSelected] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   const selectedPack = POINT_PACKS.find((p) => p.id === selected);
+  const paymentCanceled = searchParams.get("canceled") === "1";
 
   async function handlePurchase() {
     if (!selectedPack) return;
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/points", {
+      const res = await fetch("/api/points/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ packId: selected }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "購入に失敗しました");
-      router.refresh();
-      setSelected(null);
+      if (!res.ok) throw new Error(data.error || "決済の開始に失敗しました");
+      window.location.href = data.url;
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "エラーが発生しました");
-    } finally {
       setLoading(false);
     }
   }
@@ -54,6 +48,17 @@ export function PointsClient({ currentBalance, transactions }: Props) {
         <Coins className="w-6 h-6 text-amber-500" />
         <h1 className="text-2xl font-bold text-gray-900">ポイント購入</h1>
       </div>
+
+      {searchParams.get("success") === "1" && (
+        <div className="mb-6 bg-green-50 border border-green-200 text-green-700 text-sm rounded-xl px-4 py-3">
+          決済が完了しました。反映まで数秒かかる場合があります。
+        </div>
+      )}
+      {paymentCanceled && (
+        <div className="mb-6 bg-gray-50 border border-gray-200 text-gray-600 text-sm rounded-xl px-4 py-3">
+          決済がキャンセルされました。
+        </div>
+      )}
 
       {/* 残高カード */}
       <div className="bg-gradient-to-r from-amber-400 to-orange-400 rounded-2xl p-6 text-white mb-8">
